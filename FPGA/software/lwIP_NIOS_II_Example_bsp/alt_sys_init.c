@@ -2,9 +2,9 @@
  * alt_sys_init.c - HAL initialization source
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'DE2_115_SOPC'
- * SOPC Builder design path: C:/cygwin/home/adwinying/FPGA/DE2_115_SOPC.sopcinfo
+ * SOPC Builder design path: C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_SOPC.sopcinfo
  *
- * Generated: Fri Jan 13 17:31:14 JST 2017
+ * Generated: Mon Feb 06 18:47:49 JST 2017
  */
 
 /*

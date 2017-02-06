@@ -4,8 +4,8 @@
 
 BSP_TYPE=hal
 BSP_DIR=.
-SOPC_DIR=../../
-SOPC_FILE=C:/cygwin/home/adwinying/FPGA/DE2_115_SOPC.sopcinfo
+SOPC_DIR=C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/
+SOPC_FILE=C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_SOPC.sopcinfo
 NIOS2_BSP_ARGS=""
 CPU_NAME=
 

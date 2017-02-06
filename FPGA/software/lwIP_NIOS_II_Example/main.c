@@ -30,12 +30,12 @@
 #define mSdelay(x) usleep(x*1000)
 
 //  Define USE_DHCP to 1 to use DHCP.  Otherwise a static IP must be defined
-#define USE_DHCP 1
+#define USE_DHCP 0
 #if ! LWIP_DHCP
 #error LWIP_DHCP must be enabled in lwipopts.h
 #endif
 #if ! USE_DHCP
-#define STATIC_IP IP4_ADDR(&lwipStaticIp,192,168,1,100)  // Must be in this format (change the IP addr if needed)
+#define STATIC_IP IP4_ADDR(&lwipStaticIp,172,24,14,8)  // Must be in this format (change the IP addr if needed)
 struct ip_addr lwipStaticIp;
 #endif
 
@@ -75,12 +75,12 @@ void httpd_init(void);
         }
     
     //  Load platform specific MAC address into netif
-    alteraTseNetif.hwaddr[0] = 0x01;
-    alteraTseNetif.hwaddr[1] = 0x60;
-    alteraTseNetif.hwaddr[2] = 0x6e;
-    alteraTseNetif.hwaddr[3] = 0x11;
-    alteraTseNetif.hwaddr[4] = 0x02;
-    alteraTseNetif.hwaddr[5] = 0x0f;
+    alteraTseNetif.hwaddr[0] = 0x00;
+    alteraTseNetif.hwaddr[1] = 0x07;
+    alteraTseNetif.hwaddr[2] = 0xab;
+    alteraTseNetif.hwaddr[3] = 0xf0;
+    alteraTseNetif.hwaddr[4] = 0x0d;
+    alteraTseNetif.hwaddr[5] = 0xba;
 
     //  Initialize lwIP, Altera TSE and the ethernetif
     lwip_init();

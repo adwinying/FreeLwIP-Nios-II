@@ -3,8 +3,8 @@
 # This script creates the hello_world application in this directory.
 
 
-BSP_DIR=../lwIP_NIOS_II_Example_bsp
-QUARTUS_PROJECT_DIR=../../
+BSP_DIR=C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp/
+QUARTUS_PROJECT_DIR=C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/
 NIOS2_APP_GEN_ARGS="--elf-name lwIP_NIOS_II_Example.elf --set OBJDUMP_INCLUDE_SOURCE 1 --src-files hello_world.c"
 
 

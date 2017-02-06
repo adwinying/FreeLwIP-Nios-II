@@ -87,11 +87,11 @@ ACDS_VERSION := 13.1
 
 # Quartus Generated JDI File. Required for resolving node instance ID's with 
 # design component names. 
-JDI_FILE := C:/cygwin/home/adwinying/FPGA/DE2_115_NIOS_DEVICE_LED.jdi
+JDI_FILE := C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_NIOS_DEVICE_LED.jdi
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := C:/cygwin/home/adwinying/FPGA/DE2_115_SOPC.sopcinfo
+SOPCINFO_FILE := C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_SOPC.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false

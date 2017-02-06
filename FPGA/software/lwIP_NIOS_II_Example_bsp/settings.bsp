@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2017/01/13 17:31:13</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1484296273786</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\cygwin\home\adwinying\FPGA\software\lwIP_NIOS_II_Example_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>2017/02/06 18:47:48</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1486374468753</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\adwinying\Desktop\lwIP_NIOS_II_Example_bsp</BspGeneratedLocation>
         <BspSettingsFile>.\settings.bsp</BspSettingsFile>
-        <SopcDesignFile>C:\cygwin\home\adwinying\FPGA\DE2_115_SOPC.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>C:\cygwin\home\adwinying\FreeLwIP-Nios-II\FPGA\DE2_115_SOPC.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
