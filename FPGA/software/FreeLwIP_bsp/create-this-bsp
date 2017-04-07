@@ -5,7 +5,7 @@
 BSP_TYPE=freertos
 BSP_DIR=.
 SOPC_DIR=../../
-SOPC_FILE=C:/cygwin/home/adwinying/FPGA/DE2_115_SOPC.sopcinfo
+SOPC_FILE=C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_SOPC.sopcinfo
 NIOS2_BSP_ARGS="--cmd enable_sw_package lwip"
 CPU_NAME=
 

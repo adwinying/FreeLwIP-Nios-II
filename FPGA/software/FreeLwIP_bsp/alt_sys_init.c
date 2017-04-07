@@ -2,9 +2,9 @@
  * alt_sys_init.c - HAL initialization source
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'DE2_115_SOPC'
- * SOPC Builder design path: C:/cygwin/home/adwinying/FPGA/DE2_115_SOPC.sopcinfo
+ * SOPC Builder design path: C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_SOPC.sopcinfo
  *
- * Generated: Fri Jan 20 12:24:16 JST 2017
+ * Generated: Wed Apr 05 14:33:11 JST 2017
  */
 
 /*
@@ -99,7 +99,7 @@ ALTERA_AVALON_TIMER_INSTANCE ( TIMER_9, timer_9);
 ALTERA_AVALON_UART_INSTANCE ( RS232, rs232);
 ALTERA_AVALON_UART_INSTANCE ( UART_0, uart_0);
 ALTERA_AVALON_UART_INSTANCE ( UART_1, uart_1);
-ALTERA_ETH_TSE_INSTANCE ( TSE, tse);
+ALTERA_ETH_TSE_INSTANCE ( TSE_MAC, tse_mac);
 
 /*
  * Initialize the interrupt controller devices
@@ -148,5 +148,5 @@ void alt_sys_init( void )
     ALTERA_AVALON_UART_INIT ( RS232, rs232);
     ALTERA_AVALON_UART_INIT ( UART_0, uart_0);
     ALTERA_AVALON_UART_INIT ( UART_1, uart_1);
-    ALTERA_ETH_TSE_INIT ( TSE, tse);
+    ALTERA_ETH_TSE_INIT ( TSE_MAC, tse_mac);
 }

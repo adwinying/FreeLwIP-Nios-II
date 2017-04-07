@@ -627,20 +627,20 @@ module DE2_115_NIOS_DEVICE_LED(
 		.usb_conduit_end_RST_N(OTG_RST_N),
 		.usb_conduit_end_WR_N(OTG_WR_N),
 
-		// tse
-		.tse_pcs_mac_tx_clock_connection_clk(tx_clk),
-		.tse_pcs_mac_rx_clock_connection_clk(ENET0_RX_CLK),
-		.tse_mac_mdio_connection_mdc(mdc),
-		.tse_mac_mdio_connection_mdio_in(mdio_in),
-		.tse_mac_mdio_connection_mdio_out(mdio_out),
-		.tse_mac_mdio_connection_mdio_oen(mdio_oen),
-		.tse_mac_rgmii_connection_rgmii_in(ENET0_RX_DATA),
-		.tse_mac_rgmii_connection_rgmii_out(ENET0_TX_DATA),
-		.tse_mac_rgmii_connection_rx_control(ENET0_RX_DV),
-		.tse_mac_rgmii_connection_tx_control(ENET0_TX_EN),
+		// tse_mac
+		.tse_mac_pcs_mac_tx_clock_connection_clk(tx_clk),
+		.tse_mac_pcs_mac_rx_clock_connection_clk(ENET0_RX_CLK),
+		.tse_mac_mac_mdio_connection_mdc(mdc),
+		.tse_mac_mac_mdio_connection_mdio_in(mdio_in),
+		.tse_mac_mac_mdio_connection_mdio_out(mdio_out),
+		.tse_mac_mac_mdio_connection_mdio_oen(mdio_oen),
+		.tse_mac_mac_rgmii_connection_rgmii_in(ENET0_RX_DATA),
+		.tse_mac_mac_rgmii_connection_rgmii_out(ENET0_TX_DATA),
+		.tse_mac_mac_rgmii_connection_rx_control(ENET0_RX_DV),
+		.tse_mac_mac_rgmii_connection_tx_control(ENET0_TX_EN),
 
-		.tse_mac_status_connection_eth_mode(eth_mode),
-		.tse_mac_status_connection_ena_10(ena_10)
+		.tse_mac_mac_status_connection_eth_mode(eth_mode),
+		.tse_mac_mac_status_connection_ena_10(ena_10)
 	);
 
 

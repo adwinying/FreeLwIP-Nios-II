@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'DE2_115_SOPC'
- * SOPC Builder design path: C:/cygwin/home/adwinying/FPGA/DE2_115_SOPC.sopcinfo
+ * SOPC Builder design path: C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_SOPC.sopcinfo
  *
- * Generated: Fri Jan 20 12:24:16 JST 2017
+ * Generated: Wed Apr 05 15:28:12 JST 2017
  */
 
 /*
@@ -459,7 +459,7 @@
 #define OS_MAX_PRIORITIES 5
 #define OS_MAX_SYSCALL_INTERRUPT_PRIORITY 3
 #define OS_MAX_TASK_NAME_LEN 40
-#define OS_MINIMAL_STACK_SIZE 4096
+#define OS_MINIMAL_STACK_SIZE 12888
 #define OS_QUEUE_REGISTRY_SIZE 0
 #define OS_THREAD_SAFE_NEWLIB 1
 #define OS_TICKS_PER_SEC SYS_CLK_TIMER_TICKS_PER_SEC
@@ -1245,7 +1245,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1481697104
+#define SYSID_TIMESTAMP 1491372717
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -1680,32 +1680,32 @@
 
 
 /*
- * tse configuration
+ * tse_mac configuration
  *
  */
 
-#define ALT_MODULE_CLASS_tse altera_eth_tse
-#define TSE_BASE 0x2000800
-#define TSE_ENABLE_MACLITE 0
-#define TSE_FIFO_WIDTH 32
-#define TSE_IRQ -1
-#define TSE_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define TSE_IS_MULTICHANNEL_MAC 0
-#define TSE_MACLITE_GIGE 0
-#define TSE_MDIO_SHARED 0
-#define TSE_NAME "/dev/tse"
-#define TSE_NUMBER_OF_CHANNEL 1
-#define TSE_NUMBER_OF_MAC_MDIO_SHARED 1
-#define TSE_PCS 0
-#define TSE_PCS_ID 0
-#define TSE_PCS_SGMII 0
-#define TSE_RECEIVE_FIFO_DEPTH 2048
-#define TSE_REGISTER_SHARED 0
-#define TSE_RGMII 1
-#define TSE_SPAN 1024
-#define TSE_TRANSMIT_FIFO_DEPTH 2048
-#define TSE_TYPE "altera_eth_tse"
-#define TSE_USE_MDIO 1
+#define ALT_MODULE_CLASS_tse_mac altera_eth_tse
+#define TSE_MAC_BASE 0x2000800
+#define TSE_MAC_ENABLE_MACLITE 0
+#define TSE_MAC_FIFO_WIDTH 32
+#define TSE_MAC_IRQ -1
+#define TSE_MAC_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define TSE_MAC_IS_MULTICHANNEL_MAC 0
+#define TSE_MAC_MACLITE_GIGE 0
+#define TSE_MAC_MDIO_SHARED 0
+#define TSE_MAC_NAME "/dev/tse_mac"
+#define TSE_MAC_NUMBER_OF_CHANNEL 1
+#define TSE_MAC_NUMBER_OF_MAC_MDIO_SHARED 1
+#define TSE_MAC_PCS 0
+#define TSE_MAC_PCS_ID 0
+#define TSE_MAC_PCS_SGMII 0
+#define TSE_MAC_RECEIVE_FIFO_DEPTH 2048
+#define TSE_MAC_REGISTER_SHARED 0
+#define TSE_MAC_RGMII 1
+#define TSE_MAC_SPAN 1024
+#define TSE_MAC_TRANSMIT_FIFO_DEPTH 2048
+#define TSE_MAC_TYPE "altera_eth_tse"
+#define TSE_MAC_USE_MDIO 1
 
 
 /*

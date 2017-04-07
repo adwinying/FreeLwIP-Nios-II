@@ -35,7 +35,7 @@
 #error LWIP_DHCP must be enabled in lwipopts.h
 #endif
 #if ! USE_DHCP
-#define STATIC_IP IP4_ADDR(&lwipStaticIp,172,24,14,8)  // Must be in this format (change the IP addr if needed)
+#define STATIC_IP IP4_ADDR(&lwipStaticIp,172,24,11,32)  // Must be in this format (change the IP addr if needed)
 struct ip_addr lwipStaticIp;
 #endif
 

@@ -2,7 +2,7 @@ set_global_assignment -entity "DE2_115_SOPC" -library "DE2_115_SOPC" -name IP_TO
 set_global_assignment -entity "DE2_115_SOPC" -library "DE2_115_SOPC" -name IP_TOOL_VERSION "13.1"
 set_global_assignment -entity "DE2_115_SOPC" -library "DE2_115_SOPC" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "DE2_115_SOPC" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../DE2_115_SOPC.sopcinfo"]
-set_global_assignment -entity "DE2_115_SOPC" -library "DE2_115_SOPC" -name SLD_INFO "QSYS_NAME DE2_115_SOPC HAS_SOPCINFO 1 GENERATION_ID 1481697104"
+set_global_assignment -entity "DE2_115_SOPC" -library "DE2_115_SOPC" -name SLD_INFO "QSYS_NAME DE2_115_SOPC HAS_SOPCINFO 1 GENERATION_ID 1491372717"
 set_global_assignment -library "DE2_115_SOPC" -name MISC_FILE [file join $::quartus(qip_path) "../../DE2_115_SOPC.cmp"]
 set_global_assignment -library "DE2_115_SOPC" -name SLD_FILE [file join $::quartus(qip_path) "DE2_115_SOPC.regmap"]
 set_global_assignment -library "DE2_115_SOPC" -name SLD_FILE [file join $::quartus(qip_path) "DE2_115_SOPC.debuginfo"]
@@ -74,7 +74,7 @@ set_global_assignment -library "DE2_115_SOPC" -name SOURCE_FILE [file join $::qu
 set_global_assignment -library "DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/DE2_115_SOPC_descriptor_memory.v"]
 set_global_assignment -library "DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/DE2_115_SOPC_sgdma_tx.v"]
 set_global_assignment -library "DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/DE2_115_SOPC_sgdma_rx.v"]
-set_global_assignment -library "DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/DE2_115_SOPC_tse.v"]
+set_global_assignment -library "DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/DE2_115_SOPC_tse_mac.v"]
 set_global_assignment -library "DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_eth_tse_mac.v"]
 set_global_assignment -library "DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_tse_clk_cntl.v"]
 set_global_assignment -library "DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_tse_crc328checker.v"]
@@ -401,9 +401,9 @@ set_global_assignment -entity "DE2_115_SOPC_sgdma_tx" -library "DE2_115_SOPC" -n
 set_global_assignment -entity "DE2_115_SOPC_sgdma_rx" -library "DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_sgdma"
 set_global_assignment -entity "DE2_115_SOPC_sgdma_rx" -library "DE2_115_SOPC" -name IP_TOOL_VERSION "13.1"
 set_global_assignment -entity "DE2_115_SOPC_sgdma_rx" -library "DE2_115_SOPC" -name IP_TOOL_ENV "Qsys"
-set_global_assignment -entity "DE2_115_SOPC_tse" -library "DE2_115_SOPC" -name IP_TOOL_NAME "altera_eth_tse"
-set_global_assignment -entity "DE2_115_SOPC_tse" -library "DE2_115_SOPC" -name IP_TOOL_VERSION "13.1"
-set_global_assignment -entity "DE2_115_SOPC_tse" -library "DE2_115_SOPC" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "DE2_115_SOPC_tse_mac" -library "DE2_115_SOPC" -name IP_TOOL_NAME "altera_eth_tse"
+set_global_assignment -entity "DE2_115_SOPC_tse_mac" -library "DE2_115_SOPC" -name IP_TOOL_VERSION "13.1"
+set_global_assignment -entity "DE2_115_SOPC_tse_mac" -library "DE2_115_SOPC" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -entity "altera_eth_tse_mac" -library "DE2_115_SOPC" -name IP_TOOL_NAME "altera_eth_tse_mac"
 set_global_assignment -entity "altera_eth_tse_mac" -library "DE2_115_SOPC" -name IP_TOOL_VERSION "13.1"
 set_global_assignment -entity "altera_eth_tse_mac" -library "DE2_115_SOPC" -name IP_TOOL_ENV "Qsys"

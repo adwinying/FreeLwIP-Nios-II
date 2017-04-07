@@ -74,7 +74,7 @@ int tse_sgdmaRx_isr(void * context, u_long intnum);
 int tse_sgdma_read_init(lwip_tse_info* tse_ptr);
 int tse_mac_rcv(struct ethernetif *ethernetif);
 
-#define dprintf(x) //tse_dprintf x
+#define dprintf(x) printf(x) //tse_dprintf x
 
 #if! defined( ETH_PAD_SIZE ) || ETH_PAD_SIZE != 2
 #error The Altera Triple Speed Ethernet lwIP driver requires '#define ETH_PAD_SIZE 2' in lwipopts.h

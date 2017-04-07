@@ -53,8 +53,6 @@
 
 #include <system.h>
 
-
-
 .extern		vTaskSwitchContext
 	
 .set noat

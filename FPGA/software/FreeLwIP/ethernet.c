@@ -27,8 +27,6 @@ extern "C"
 
 #define MDIO_IFACE						mdio1
 
-#define TSE_MAC_BASE					0x02000800
-
 extern void prvMySocketTest(void *params);
 
 #ifdef __cplusplus

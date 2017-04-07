@@ -87,11 +87,11 @@ ACDS_VERSION := 13.1
 
 # Quartus Generated JDI File. Required for resolving node instance ID's with 
 # design component names. 
-JDI_FILE := C:/cygwin/home/adwinying/FPGA/DE2_115_NIOS_DEVICE_LED.jdi
+JDI_FILE := C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_NIOS_DEVICE_LED.jdi
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := C:/cygwin/home/adwinying/FPGA/DE2_115_SOPC.sopcinfo
+SOPCINFO_FILE := C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_SOPC.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false
@@ -156,9 +156,9 @@ SOPC_SYSID_FLAG += --sidp=0x80001a8
 ELF_PATCH_FLAG  += --sidp 0x80001a8
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1481697104
-SOPC_SYSID_FLAG += --timestamp=1481697104
-ELF_PATCH_FLAG  += --timestamp 1481697104
+# setting SOPC_TIMESTAMP is 1491372717
+SOPC_SYSID_FLAG += --timestamp=1491372717
+ELF_PATCH_FLAG  += --timestamp 1491372717
 
 # Enable JTAG UART driver to recover when host is inactive causing buffer to 
 # full without returning error. Printf will not fail with this recovery. none 

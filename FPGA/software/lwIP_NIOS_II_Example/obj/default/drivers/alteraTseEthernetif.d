@@ -11,12 +11,12 @@ obj/default/drivers/alteraTseEthernetif.o: drivers/alteraTseEthernetif.c \
  drivers/arch/epstruct.h lwip/src/include/lwip/udp.h \
  lwip/src/include/ipv4/lwip/ip.h lwip/src/include/netif/etharp.h \
  lwip/src/include/netif/ppp_oe.h drivers/alteraTseEthernetif.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_irq.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/nios2.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/alt_types.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp/system.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp/linker.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_cache.h
+ ../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_irq.h \
+ ../lwIP_NIOS_II_Example_bsp/HAL/inc/nios2.h \
+ ../lwIP_NIOS_II_Example_bsp/HAL/inc/alt_types.h \
+ ../lwIP_NIOS_II_Example_bsp/system.h \
+ ../lwIP_NIOS_II_Example_bsp/linker.h \
+ ../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_cache.h
 
 lwip/src/include/lwip/opt.h:
 
@@ -66,14 +66,14 @@ lwip/src/include/netif/ppp_oe.h:
 
 drivers/alteraTseEthernetif.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_irq.h:
+../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_irq.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/nios2.h:
+../lwIP_NIOS_II_Example_bsp/HAL/inc/nios2.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/alt_types.h:
+../lwIP_NIOS_II_Example_bsp/HAL/inc/alt_types.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp/system.h:
+../lwIP_NIOS_II_Example_bsp/system.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp/linker.h:
+../lwIP_NIOS_II_Example_bsp/linker.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_cache.h:
+../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_cache.h:

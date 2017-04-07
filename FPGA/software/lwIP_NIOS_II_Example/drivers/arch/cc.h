@@ -68,7 +68,7 @@ typedef u32_t sys_prot_t;
 #include <stdlib.h>
 /* Plaform specific diagnostic output */
 #ifndef LWIP_PLATFORM_DIAG
-#define LWIP_PLATFORM_DIAG(x)	do {printf x;} while(0)
+#define LWIP_PLATFORM_DIAG(x)	do {printf(x);} while(0)
 int printf( const char *fmt, ... );
 #endif
 

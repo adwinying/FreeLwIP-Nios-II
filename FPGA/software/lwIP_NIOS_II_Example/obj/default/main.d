@@ -1,16 +1,15 @@
-obj/default/main.o: main.c \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp/system.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp/linker.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_timestamp.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/alt_types.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//drivers/inc/altera_avalon_timer.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_dev.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_llist.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/priv/alt_dev_llist.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_warning.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_alarm.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_llist.h \
- C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/priv/alt_alarm.h \
+obj/default/main.o: main.c ../lwIP_NIOS_II_Example_bsp/system.h \
+ ../lwIP_NIOS_II_Example_bsp/linker.h \
+ ../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_timestamp.h \
+ ../lwIP_NIOS_II_Example_bsp/HAL/inc/alt_types.h \
+ ../lwIP_NIOS_II_Example_bsp/drivers/inc/altera_avalon_timer.h \
+ ../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_dev.h \
+ ../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_llist.h \
+ ../lwIP_NIOS_II_Example_bsp/HAL/inc/priv/alt_dev_llist.h \
+ ../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_warning.h \
+ ../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_alarm.h \
+ ../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_llist.h \
+ ../lwIP_NIOS_II_Example_bsp/HAL/inc/priv/alt_alarm.h \
  lwip/src/include/lwip/init.h lwip/src/include/lwip/opt.h \
  drivers/lwipopts.h lwip/src/include/lwip/debug.h \
  lwip/src/include/lwip/arch.h drivers/arch/cc.h \
@@ -26,29 +25,29 @@ obj/default/main.o: main.c \
  lwip/src/include/ipv4/lwip/ip_frag.h lwip/src/include/netif/etharp.h \
  drivers/alteraTseEthernetif.h
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp/system.h:
+../lwIP_NIOS_II_Example_bsp/system.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp/linker.h:
+../lwIP_NIOS_II_Example_bsp/linker.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_timestamp.h:
+../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_timestamp.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/alt_types.h:
+../lwIP_NIOS_II_Example_bsp/HAL/inc/alt_types.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//drivers/inc/altera_avalon_timer.h:
+../lwIP_NIOS_II_Example_bsp/drivers/inc/altera_avalon_timer.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_dev.h:
+../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_dev.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_llist.h:
+../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_llist.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/priv/alt_dev_llist.h:
+../lwIP_NIOS_II_Example_bsp/HAL/inc/priv/alt_dev_llist.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_warning.h:
+../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_warning.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_alarm.h:
+../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_alarm.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/sys/alt_llist.h:
+../lwIP_NIOS_II_Example_bsp/HAL/inc/sys/alt_llist.h:
 
-C:/Users/adwinying/Desktop/lwIP_NIOS_II_Example_bsp//HAL/inc/priv/alt_alarm.h:
+../lwIP_NIOS_II_Example_bsp/HAL/inc/priv/alt_alarm.h:
 
 lwip/src/include/lwip/init.h:
 

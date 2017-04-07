@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2016.12.14.15:31:46</td>
+    <td class="l">2017.04.05.15:11:58</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -244,7 +244,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <a href="#module_cfi_flash"><b>cfi_flash</b>
      </a> altera_generic_tristate_controller 13.1
      <br/>&#160;&#160;
-     <a href="#module_tse"><b>tse</b>
+     <a href="#module_tse_mac"><b>tse_mac</b>
      </a> altera_eth_tse 13.1
      <br/>&#160;&#160;
      <a href="#module_sgdma_rx"><b>sgdma_rx</b>
@@ -1548,7 +1548,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slavemodule">&#160;
-     <a href="#module_tse"><b>tse</b>
+     <a href="#module_tse_mac"><b>tse_mac</b>
      </a>
     </td>
     <td class="empty"></td>
@@ -7360,7 +7360,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">c0&#160;&#160;</td>
       <td class="neighbor" rowspan="6">
-       <a href="#module_tse">tse</a>
+       <a href="#module_tse_mac">tse_mac</a>
       </td>
      </tr>
      <tr>
@@ -14564,7 +14564,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">data_master&#160;&#160;</td>
       <td class="neighbor" rowspan="4">
-       <a href="#module_tse">tse</a>
+       <a href="#module_tse_mac">tse_mac</a>
       </td>
      </tr>
      <tr>
@@ -15147,7 +15147,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">dataSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='sdram.s1' start='0x0' end='0x2000000' /&gt;&lt;slave name='cpu.jtag_debug_module' start='0x2000000' end='0x2000800' /&gt;&lt;slave name='tse.control_port' start='0x2000800' end='0x2000C00' /&gt;&lt;slave name='sgdma_tx.csr' start='0x2000C00' end='0x2000C40' /&gt;&lt;slave name='sgdma_rx.csr' start='0x2000C40' end='0x2000C80' /&gt;&lt;slave name='uart_0.s1' start='0x2000D00' end='0x2000D20' /&gt;&lt;slave name='uart_1.s1' start='0x2000D40' end='0x2000D60' /&gt;&lt;slave name='descriptor_memory.s1' start='0x2001000' end='0x2002000' /&gt;&lt;slave name='cfi_flash.uas' start='0x4000000' end='0x4800000' /&gt;&lt;slave name='sram.avalon_slave' start='0x5000000' end='0x5200000' /&gt;&lt;slave name='pll.pll_slave' start='0x8000140' end='0x8000150' /&gt;&lt;slave name='sys_clk_timer.s1' start='0x8000160' end='0x8000180' /&gt;&lt;slave name='jtag_uart.avalon_jtag_slave' start='0x80001A0' end='0x80001A8' /&gt;&lt;slave name='sysid.control_slave' start='0x80001A8' end='0x80001B0' /&gt;&lt;slave name='sysver_0.avalon_slave_0' start='0x80001C0' end='0x80001E0' /&gt;&lt;slave name='timer_0.s1' start='0x8000200' end='0x8000220' /&gt;&lt;slave name='timer_1.s1' start='0x8000220' end='0x8000240' /&gt;&lt;slave name='timer_2.s1' start='0x8000240' end='0x8000260' /&gt;&lt;slave name='timer_3.s1' start='0x8000260' end='0x8000280' /&gt;&lt;slave name='timer_4.s1' start='0x8000280' end='0x80002A0' /&gt;&lt;slave name='timer_5.s1' start='0x80002A0' end='0x80002C0' /&gt;&lt;slave name='timer_6.s1' start='0x80002C0' end='0x80002E0' /&gt;&lt;slave name='timer_7.s1' start='0x80002E0' end='0x8000300' /&gt;&lt;slave name='timer_8.s1' start='0x8000300' end='0x8000320' /&gt;&lt;slave name='timer_9.s1' start='0x8000320' end='0x8000340' /&gt;&lt;slave name='timer_10.s1' start='0x8000340' end='0x8000360' /&gt;&lt;slave name='timer_11.s1' start='0x8000360' end='0x8000380' /&gt;&lt;slave name='timer_12.s1' start='0x8000380' end='0x80003A0' /&gt;&lt;slave name='timer_13.s1' start='0x80003A0' end='0x80003C0' /&gt;&lt;slave name='timer_14.s1' start='0x80003C0' end='0x80003E0' /&gt;&lt;slave name='timer_15.s1' start='0x80003E0' end='0x8000400' /&gt;&lt;slave name='key.s1' start='0x8000400' end='0x8000410' /&gt;&lt;slave name='sw.s1' start='0x8000410' end='0x8000420' /&gt;&lt;slave name='ledg.s1' start='0x8000420' end='0x8000430' /&gt;&lt;slave name='ledr.s1' start='0x8000430' end='0x8000440' /&gt;&lt;slave name='rs232.s1' start='0x8000440' end='0x8000460' /&gt;&lt;slave name='i2c_scl.s1' start='0x8000460' end='0x8000470' /&gt;&lt;slave name='i2c_sda.s1' start='0x8000470' end='0x8000480' /&gt;&lt;slave name='eep_i2c_scl.s1' start='0x8000480' end='0x8000490' /&gt;&lt;slave name='eep_i2c_sda.s1' start='0x8000490' end='0x80004A0' /&gt;&lt;slave name='lcd.control_slave' start='0x80004A0' end='0x80004B0' /&gt;&lt;slave name='ir.s1' start='0x80004B0' end='0x80004C0' /&gt;&lt;slave name='sd_clk.s1' start='0x80004C0' end='0x80004D0' /&gt;&lt;slave name='sd_cmd.s1' start='0x80004D0' end='0x80004E0' /&gt;&lt;slave name='sd_dat.s1' start='0x80004E0' end='0x80004F0' /&gt;&lt;slave name='sd_wp_n.s1' start='0x80004F0' end='0x8000500' /&gt;&lt;slave name='seg7.avalon_slave' start='0x8000500' end='0x8000520' /&gt;&lt;slave name='sma_in.s1' start='0x8001000' end='0x8001010' /&gt;&lt;slave name='sma_out.s1' start='0x8001010' end='0x8001020' /&gt;&lt;slave name='audio.avalon_slave' start='0x8001020' end='0x8001040' /&gt;&lt;slave name='usb.hc' start='0x8001040' end='0x8001048' /&gt;&lt;slave name='usb.dc' start='0x8001050' end='0x8001058' /&gt;&lt;slave name='can_top_0.avalon_slave_0' start='0x8020000' end='0x8020400' /&gt;&lt;slave name='onchip_memory2.s1' start='0xA000000' end='0xA020000' /&gt;&lt;slave name='vic_0.csr_access' start='0xF000000' end='0xF000400' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='sdram.s1' start='0x0' end='0x2000000' /&gt;&lt;slave name='cpu.jtag_debug_module' start='0x2000000' end='0x2000800' /&gt;&lt;slave name='tse_mac.control_port' start='0x2000800' end='0x2000C00' /&gt;&lt;slave name='sgdma_tx.csr' start='0x2000C00' end='0x2000C40' /&gt;&lt;slave name='sgdma_rx.csr' start='0x2000C40' end='0x2000C80' /&gt;&lt;slave name='uart_0.s1' start='0x2000D00' end='0x2000D20' /&gt;&lt;slave name='uart_1.s1' start='0x2000D40' end='0x2000D60' /&gt;&lt;slave name='descriptor_memory.s1' start='0x2001000' end='0x2002000' /&gt;&lt;slave name='cfi_flash.uas' start='0x4000000' end='0x4800000' /&gt;&lt;slave name='sram.avalon_slave' start='0x5000000' end='0x5200000' /&gt;&lt;slave name='pll.pll_slave' start='0x8000140' end='0x8000150' /&gt;&lt;slave name='sys_clk_timer.s1' start='0x8000160' end='0x8000180' /&gt;&lt;slave name='jtag_uart.avalon_jtag_slave' start='0x80001A0' end='0x80001A8' /&gt;&lt;slave name='sysid.control_slave' start='0x80001A8' end='0x80001B0' /&gt;&lt;slave name='sysver_0.avalon_slave_0' start='0x80001C0' end='0x80001E0' /&gt;&lt;slave name='timer_0.s1' start='0x8000200' end='0x8000220' /&gt;&lt;slave name='timer_1.s1' start='0x8000220' end='0x8000240' /&gt;&lt;slave name='timer_2.s1' start='0x8000240' end='0x8000260' /&gt;&lt;slave name='timer_3.s1' start='0x8000260' end='0x8000280' /&gt;&lt;slave name='timer_4.s1' start='0x8000280' end='0x80002A0' /&gt;&lt;slave name='timer_5.s1' start='0x80002A0' end='0x80002C0' /&gt;&lt;slave name='timer_6.s1' start='0x80002C0' end='0x80002E0' /&gt;&lt;slave name='timer_7.s1' start='0x80002E0' end='0x8000300' /&gt;&lt;slave name='timer_8.s1' start='0x8000300' end='0x8000320' /&gt;&lt;slave name='timer_9.s1' start='0x8000320' end='0x8000340' /&gt;&lt;slave name='timer_10.s1' start='0x8000340' end='0x8000360' /&gt;&lt;slave name='timer_11.s1' start='0x8000360' end='0x8000380' /&gt;&lt;slave name='timer_12.s1' start='0x8000380' end='0x80003A0' /&gt;&lt;slave name='timer_13.s1' start='0x80003A0' end='0x80003C0' /&gt;&lt;slave name='timer_14.s1' start='0x80003C0' end='0x80003E0' /&gt;&lt;slave name='timer_15.s1' start='0x80003E0' end='0x8000400' /&gt;&lt;slave name='key.s1' start='0x8000400' end='0x8000410' /&gt;&lt;slave name='sw.s1' start='0x8000410' end='0x8000420' /&gt;&lt;slave name='ledg.s1' start='0x8000420' end='0x8000430' /&gt;&lt;slave name='ledr.s1' start='0x8000430' end='0x8000440' /&gt;&lt;slave name='rs232.s1' start='0x8000440' end='0x8000460' /&gt;&lt;slave name='i2c_scl.s1' start='0x8000460' end='0x8000470' /&gt;&lt;slave name='i2c_sda.s1' start='0x8000470' end='0x8000480' /&gt;&lt;slave name='eep_i2c_scl.s1' start='0x8000480' end='0x8000490' /&gt;&lt;slave name='eep_i2c_sda.s1' start='0x8000490' end='0x80004A0' /&gt;&lt;slave name='lcd.control_slave' start='0x80004A0' end='0x80004B0' /&gt;&lt;slave name='ir.s1' start='0x80004B0' end='0x80004C0' /&gt;&lt;slave name='sd_clk.s1' start='0x80004C0' end='0x80004D0' /&gt;&lt;slave name='sd_cmd.s1' start='0x80004D0' end='0x80004E0' /&gt;&lt;slave name='sd_dat.s1' start='0x80004E0' end='0x80004F0' /&gt;&lt;slave name='sd_wp_n.s1' start='0x80004F0' end='0x8000500' /&gt;&lt;slave name='seg7.avalon_slave' start='0x8000500' end='0x8000520' /&gt;&lt;slave name='sma_in.s1' start='0x8001000' end='0x8001010' /&gt;&lt;slave name='sma_out.s1' start='0x8001010' end='0x8001020' /&gt;&lt;slave name='audio.avalon_slave' start='0x8001020' end='0x8001040' /&gt;&lt;slave name='usb.hc' start='0x8001040' end='0x8001048' /&gt;&lt;slave name='usb.dc' start='0x8001050' end='0x8001058' /&gt;&lt;slave name='can_top_0.avalon_slave_0' start='0x8020000' end='0x8020400' /&gt;&lt;slave name='onchip_memory2.s1' start='0xA000000' end='0xA020000' /&gt;&lt;slave name='vic_0.csr_access' start='0xF000000' end='0xF000400' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">clockFrequency</td>
@@ -15439,7 +15439,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">timestamp</td>
-        <td class="parametervalue">1481697104</td>
+        <td class="parametervalue">1491372717</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_CLK_CLOCK_RATE</td>
@@ -15472,7 +15472,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TIMESTAMP</td>
-        <td class="parametervalue">1481697104</td>
+        <td class="parametervalue">1491372717</td>
        </tr>
       </table>
      </td>
@@ -16177,10 +16177,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_tse"> </a>
+  <a name="module_tse_mac"> </a>
   <div>
    <hr/>
-   <h2>tse</h2>altera_eth_tse v13.1
+   <h2>tse_mac</h2>altera_eth_tse v13.1
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
@@ -16189,7 +16189,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_pll">pll</a>
       </td>
       <td class="from">c0&#160;&#160;</td>
-      <td class="main" rowspan="19">tse</td>
+      <td class="main" rowspan="19">tse_mac</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;receive_clock_connection</td>
@@ -16588,7 +16588,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="neighbor" rowspan="2">
-       <a href="#module_tse">tse</a>
+       <a href="#module_tse_mac">tse_mac</a>
       </td>
       <td class="from">receive&#160;&#160;</td>
      </tr>
@@ -16961,7 +16961,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">out&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_tse">tse</a>
+       <a href="#module_tse_mac">tse_mac</a>
       </td>
      </tr>
      <tr>
@@ -17495,7 +17495,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   <table class="blueBar">
    <tr>
     <td class="l">generation took 0.01 seconds</td>
-    <td class="r">rendering took 0.47 seconds</td>
+    <td class="r">rendering took 0.45 seconds</td>
    </tr>
   </table>
  </body>

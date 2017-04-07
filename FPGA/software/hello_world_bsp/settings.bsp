@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2016/12/14 15:57:21</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1481698641215</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\cygwin\home\adwinying\FPGA\software\hello_world_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>2017/04/05 15:25:45</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1491373545563</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\cygwin\home\adwinying\FreeLwIP-Nios-II\FPGA\software\hello_world_bsp</BspGeneratedLocation>
         <BspSettingsFile>.\settings.bsp</BspSettingsFile>
-        <SopcDesignFile>C:\cygwin\home\adwinying\FPGA\DE2_115_SOPC.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>C:\cygwin\home\adwinying\FreeLwIP-Nios-II\FPGA\DE2_115_SOPC.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -2105,7 +2105,7 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>tse</slaveDescriptor>
+                <slaveDescriptor>tse_mac</slaveDescriptor>
                 <addressRange>0x02000800 - 0x02000BFF</addressRange>
                 <addressSpan>1024</addressSpan>
                 <attributes/>

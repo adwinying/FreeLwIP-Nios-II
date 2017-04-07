@@ -1,9 +1,9 @@
 # memory.gdb - GDB memory region definitions
 #
 # Machine generated for CPU 'cpu' in SOPC Builder design 'DE2_115_SOPC'
-# SOPC Builder design path: C:/cygwin/home/adwinying/FPGA/DE2_115_SOPC.sopcinfo
+# SOPC Builder design path: C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_SOPC.sopcinfo
 #
-# Generated: Fri Jan 20 12:24:16 JST 2017
+# Generated: Wed Apr 05 14:33:11 JST 2017
 
 # DO NOT MODIFY THIS FILE
 #

@@ -31,49 +31,49 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   6 .debug_aranges 00000ae8  00000000  00000000  0000e048  2**3
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_info   0001c9f0  00000000  00000000  0000eb30  2**0
+  7 .debug_info   0001ca23  00000000  00000000  0000eb30  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_abbrev 00006c9a  00000000  00000000  0002b520  2**0
+  8 .debug_abbrev 00006c9a  00000000  00000000  0002b553  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_line   00008495  00000000  00000000  000321ba  2**0
+  9 .debug_line   00008495  00000000  00000000  000321ed  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_frame  000018ec  00000000  00000000  0003a650  2**2
+ 10 .debug_frame  000018ec  00000000  00000000  0003a684  2**2
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_str    0000329d  00000000  00000000  0003bf3c  2**0
+ 11 .debug_str    000032bf  00000000  00000000  0003bf70  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_loc    00006164  00000000  00000000  0003f1d9  2**0
+ 12 .debug_loc    00006164  00000000  00000000  0003f22f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_alt_sim_info 00000050  00000000  00000000  00045340  2**2
+ 13 .debug_alt_sim_info 00000050  00000000  00000000  00045394  2**2
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_ranges 00000330  00000000  00000000  00045390  2**3
+ 14 .debug_ranges 00000330  00000000  00000000  000453e8  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .thread_model 00000003  00000000  00000000  00048be3  2**0
+ 15 .thread_model 00000003  00000000  00000000  00048c3b  2**0
                   CONTENTS, READONLY
- 16 .cpu          00000003  00000000  00000000  00048be6  2**0
+ 16 .cpu          00000003  00000000  00000000  00048c3e  2**0
                   CONTENTS, READONLY
- 17 .qsys         00000001  00000000  00000000  00048be9  2**0
+ 17 .qsys         00000001  00000000  00000000  00048c41  2**0
                   CONTENTS, READONLY
- 18 .simulation_enabled 00000001  00000000  00000000  00048bea  2**0
+ 18 .simulation_enabled 00000001  00000000  00000000  00048c42  2**0
                   CONTENTS, READONLY
- 19 .sysid_hash   00000004  00000000  00000000  00048beb  2**0
+ 19 .sysid_hash   00000004  00000000  00000000  00048c43  2**0
                   CONTENTS, READONLY
- 20 .sysid_base   00000004  00000000  00000000  00048bef  2**0
+ 20 .sysid_base   00000004  00000000  00000000  00048c47  2**0
                   CONTENTS, READONLY
- 21 .sysid_time   00000004  00000000  00000000  00048bf3  2**0
+ 21 .sysid_time   00000004  00000000  00000000  00048c4b  2**0
                   CONTENTS, READONLY
- 22 .stderr_dev   00000009  00000000  00000000  00048bf7  2**0
+ 22 .stderr_dev   00000009  00000000  00000000  00048c4f  2**0
                   CONTENTS, READONLY
- 23 .stdin_dev    00000009  00000000  00000000  00048c00  2**0
+ 23 .stdin_dev    00000009  00000000  00000000  00048c58  2**0
                   CONTENTS, READONLY
- 24 .stdout_dev   00000009  00000000  00000000  00048c09  2**0
+ 24 .stdout_dev   00000009  00000000  00000000  00048c61  2**0
                   CONTENTS, READONLY
- 25 .sopc_system_name 0000000c  00000000  00000000  00048c12  2**0
+ 25 .sopc_system_name 0000000c  00000000  00000000  00048c6a  2**0
                   CONTENTS, READONLY
- 26 .quartus_project_dir 0000001d  00000000  00000000  00048c1e  2**0
+ 26 .quartus_project_dir 0000002e  00000000  00000000  00048c76  2**0
                   CONTENTS, READONLY
- 27 .jdi          00005066  00000000  00000000  00048c3b  2**0
+ 27 .jdi          00005066  00000000  00000000  00048ca4  2**0
                   CONTENTS, READONLY
- 28 .sopcinfo     001a1f69  00000000  00000000  0004dca1  2**0
+ 28 .sopcinfo     001a200d  00000000  00000000  0004dd0a  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 05000000 l    d  .entry	00000000 .entry
@@ -4736,7 +4736,7 @@ void alt_sys_init( void )
     3668:	01000074 	movhi	r4,1
     366c:	21318604 	addi	r4,r4,-14824
     3670:	00035040 	call	3504 <alt_dev_reg>
-    ALTERA_ETH_TSE_INIT ( TSE, tse);
+    ALTERA_ETH_TSE_INIT ( TSE_MAC, tse_mac);
     3674:	0001883a 	nop
 }
     3678:	e037883a 	mov	sp,fp

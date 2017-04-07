@@ -7,7 +7,7 @@
 <td width="20%" bgcolor="#77BBFF">BSP Type:</td><td>freertos</td>
 </tr>
 <tr mode="wrap">
-<td width="20%" bgcolor="#77BBFF">SOPC Design File:</td><td>C:\cygwin\home\adwinying\FPGA\DE2_115_SOPC.sopcinfo</td>
+<td width="20%" bgcolor="#77BBFF">SOPC Design File:</td><td>C:\cygwin\home\adwinying\FreeLwIP-Nios-II\FPGA\DE2_115_SOPC.sopcinfo</td>
 </tr>
 <tr mode="wrap">
 <td width="20%" bgcolor="#77BBFF">Quartus JDI File:</td><td>default</td>
@@ -16,19 +16,19 @@
 <td width="20%" bgcolor="#77BBFF">CPU:</td><td>cpu</td>
 </tr>
 <tr mode="wrap">
-<td width="20%" bgcolor="#77BBFF">BSP Settings File:</td><td>.\settings.bsp</td>
+<td width="20%" bgcolor="#77BBFF">BSP Settings File:</td><td>settings.bsp</td>
 </tr>
 <tr mode="wrap">
 <td width="20%" bgcolor="#77BBFF">BSP Version:</td><td>default</td>
 </tr>
 <tr mode="wrap">
-<td width="20%" bgcolor="#77BBFF">BSP Generated On:</td><td>2017/01/20 12:24:12</td>
+<td width="20%" bgcolor="#77BBFF">BSP Generated On:</td><td>2017/04/05 15:37:56</td>
 </tr>
 <tr mode="wrap">
-<td width="20%" bgcolor="#77BBFF">BSP Generated Timestamp:</td><td>1484882652396</td>
+<td width="20%" bgcolor="#77BBFF">BSP Generated Timestamp:</td><td>1491374276522</td>
 </tr>
 <tr mode="wrap">
-<td width="20%" bgcolor="#77BBFF">BSP Generated Location:</td><td>C:\cygwin\home\adwinying\FPGA\software\FreeLwIP_bsp</td>
+<td width="20%" bgcolor="#77BBFF">BSP Generated Location:</td><td>C:\cygwin\home\adwinying\FreeLwIP-Nios-II\FPGA\software\FreeLwIP_bsp</td>
 </tr>
 </table>
 <br>
@@ -194,7 +194,7 @@
 <td>sgdma_tx</td><td>0x02000C00 - 0x02000C3F</td><td>64</td><td class="listing">&nbsp;</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>tse</td><td>0x02000800 - 0x02000BFF</td><td>1024</td><td class="listing">&nbsp;</td>
+<td>tse_mac</td><td>0x02000800 - 0x02000BFF</td><td>1024</td><td class="listing">&nbsp;</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
 <td>sdram</td><td>0x00000000 - 0x01FFFFFF</td><td>33554432</td><td class="listing">memory</td>
@@ -3912,7 +3912,7 @@ Each available priority consumes RAM within the kernel so this value should not 
 <td width="20%">Default Value:</td><td>4096</td>
 </tr>
 <tr>
-<td width="20%">Value:</td><td>4096</td>
+<td width="20%">Value:</td><td>8192</td>
 </tr>
 <tr>
 <td width="20%">Type:</td><td>DecimalNumber</td>
