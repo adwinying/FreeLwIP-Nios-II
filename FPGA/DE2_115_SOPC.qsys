@@ -46,19 +46,6 @@
          type = "long";
       }
    }
-   element seg7.avalon_slave
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "1280";
-         type = "long";
-      }
-   }
    element audio.avalon_slave
    {
       datum _lockedAddress
@@ -69,6 +56,19 @@
       datum baseAddress
       {
          value = "134221856";
+         type = "long";
+      }
+   }
+   element seg7.avalon_slave
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "1280";
          type = "long";
       }
    }
@@ -140,14 +140,6 @@
       datum _sortIndex
       {
          value = "53";
-         type = "int";
-      }
-   }
-   element cfi_flash
-   {
-      datum _sortIndex
-      {
-         value = "6";
          type = "int";
       }
    }
@@ -306,6 +298,14 @@
          type = "int";
       }
    }
+   element ext_flash
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
    element usb.hc
    {
       datum _lockedAddress
@@ -449,7 +449,7 @@
          type = "boolean";
       }
    }
-   element ledr.s1
+   element ir.s1
    {
       datum _lockedAddress
       {
@@ -458,319 +458,7 @@
       }
       datum baseAddress
       {
-         value = "1072";
-         type = "long";
-      }
-   }
-   element i2c_scl.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "1120";
-         type = "long";
-      }
-   }
-   element ledg.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "1056";
-         type = "long";
-      }
-   }
-   element timer_3.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "608";
-         type = "long";
-      }
-   }
-   element timer_12.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "896";
-         type = "long";
-      }
-   }
-   element rs232.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "1088";
-         type = "long";
-      }
-   }
-   element eep_i2c_sda.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "1168";
-         type = "long";
-      }
-   }
-   element uart_1.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "33557824";
-         type = "long";
-      }
-   }
-   element uart_0.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "33557760";
-         type = "long";
-      }
-   }
-   element eep_i2c_scl.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "1152";
-         type = "long";
-      }
-   }
-   element sd_clk.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "1216";
-         type = "long";
-      }
-   }
-   element sd_dat.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "1248";
-         type = "long";
-      }
-   }
-   element sma_out.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "134221840";
-         type = "long";
-      }
-   }
-   element key.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "1024";
-         type = "long";
-      }
-   }
-   element sdram.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "0";
-         type = "long";
-      }
-   }
-   element onchip_memory2.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "167772160";
-         type = "long";
-      }
-   }
-   element timer_9.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "800";
-         type = "long";
-      }
-   }
-   element timer_15.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "992";
-         type = "long";
-      }
-   }
-   element sd_cmd.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "1232";
-         type = "long";
-      }
-   }
-   element timer_13.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "928";
-         type = "long";
-      }
-   }
-   element sw.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "1040";
-         type = "long";
-      }
-   }
-   element timer_11.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "864";
-         type = "long";
-      }
-   }
-   element i2c_sda.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "1136";
-         type = "long";
-      }
-   }
-   element timer_7.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "736";
-         type = "long";
-      }
-   }
-   element timer_10.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "832";
+         value = "1200";
          type = "long";
       }
    }
@@ -787,7 +475,7 @@
          type = "long";
       }
    }
-   element timer_0.s1
+   element onchip_memory2.s1
    {
       datum _lockedAddress
       {
@@ -796,11 +484,11 @@
       }
       datum baseAddress
       {
-         value = "512";
+         value = "167772160";
          type = "long";
       }
    }
-   element descriptor_memory.s1
+   element timer_12.s1
    {
       datum _lockedAddress
       {
@@ -809,11 +497,11 @@
       }
       datum baseAddress
       {
-         value = "33558528";
-         type = "String";
+         value = "896";
+         type = "long";
       }
    }
-   element timer_6.s1
+   element ledr.s1
    {
       datum _lockedAddress
       {
@@ -822,7 +510,33 @@
       }
       datum baseAddress
       {
-         value = "704";
+         value = "1072";
+         type = "long";
+      }
+   }
+   element sma_out.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "134221840";
+         type = "long";
+      }
+   }
+   element sw.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "1040";
          type = "long";
       }
    }
@@ -839,7 +553,7 @@
          type = "long";
       }
    }
-   element sd_wp_n.s1
+   element key.s1
    {
       datum _lockedAddress
       {
@@ -848,7 +562,33 @@
       }
       datum baseAddress
       {
-         value = "1264";
+         value = "1024";
+         type = "long";
+      }
+   }
+   element sd_dat.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "1248";
+         type = "long";
+      }
+   }
+   element sd_clk.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "1216";
          type = "long";
       }
    }
@@ -865,7 +605,7 @@
          type = "long";
       }
    }
-   element timer_8.s1
+   element timer_3.s1
    {
       datum _lockedAddress
       {
@@ -874,20 +614,7 @@
       }
       datum baseAddress
       {
-         value = "768";
-         type = "long";
-      }
-   }
-   element ir.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "1200";
+         value = "608";
          type = "long";
       }
    }
@@ -904,7 +631,7 @@
          type = "long";
       }
    }
-   element timer_14.s1
+   element ledg.s1
    {
       datum _lockedAddress
       {
@@ -913,7 +640,85 @@
       }
       datum baseAddress
       {
-         value = "960";
+         value = "1056";
+         type = "long";
+      }
+   }
+   element i2c_sda.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "1136";
+         type = "long";
+      }
+   }
+   element uart_1.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "33557824";
+         type = "long";
+      }
+   }
+   element timer_13.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "928";
+         type = "long";
+      }
+   }
+   element timer_7.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "736";
+         type = "long";
+      }
+   }
+   element eep_i2c_scl.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "1152";
+         type = "long";
+      }
+   }
+   element sdram.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "0";
          type = "long";
       }
    }
@@ -930,6 +735,188 @@
          type = "long";
       }
    }
+   element eep_i2c_sda.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "1168";
+         type = "long";
+      }
+   }
+   element timer_9.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "800";
+         type = "long";
+      }
+   }
+   element timer_14.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "960";
+         type = "long";
+      }
+   }
+   element timer_8.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "768";
+         type = "long";
+      }
+   }
+   element timer_0.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "512";
+         type = "long";
+      }
+   }
+   element sd_cmd.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "1232";
+         type = "long";
+      }
+   }
+   element timer_6.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "704";
+         type = "long";
+      }
+   }
+   element descriptor_memory.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "33558528";
+         type = "String";
+      }
+   }
+   element sd_wp_n.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "1264";
+         type = "long";
+      }
+   }
+   element uart_0.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "33557760";
+         type = "long";
+      }
+   }
+   element i2c_scl.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "1120";
+         type = "long";
+      }
+   }
+   element timer_15.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "992";
+         type = "long";
+      }
+   }
+   element timer_10.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "832";
+         type = "long";
+      }
+   }
+   element timer_11.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "864";
+         type = "long";
+      }
+   }
    element timer_2.s1
    {
       datum _lockedAddress
@@ -940,6 +927,19 @@
       datum baseAddress
       {
          value = "576";
+         type = "long";
+      }
+   }
+   element rs232.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "1088";
          type = "long";
       }
    }
@@ -1231,7 +1231,7 @@
          type = "int";
       }
    }
-   element cfi_flash.uas
+   element ext_flash.uas
    {
       datum _lockedAddress
       {
@@ -2330,8 +2330,8 @@
   <parameter name="tightlyCoupledInstructionMaster1AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
-  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='sdram.s1' start='0x0' end='0x2000000' /><slave name='cpu.jtag_debug_module' start='0x2000000' end='0x2000800' /><slave name='cfi_flash.uas' start='0x4000000' end='0x4800000' /><slave name='sram.avalon_slave' start='0x5000000' end='0x5200000' /><slave name='onchip_memory2.s1' start='0xA000000' end='0xA020000' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram.s1' start='0x0' end='0x2000000' /><slave name='cpu.jtag_debug_module' start='0x2000000' end='0x2000800' /><slave name='tse_mac.control_port' start='0x2000800' end='0x2000C00' /><slave name='sgdma_tx.csr' start='0x2000C00' end='0x2000C40' /><slave name='sgdma_rx.csr' start='0x2000C40' end='0x2000C80' /><slave name='uart_0.s1' start='0x2000D00' end='0x2000D20' /><slave name='uart_1.s1' start='0x2000D40' end='0x2000D60' /><slave name='descriptor_memory.s1' start='0x2001000' end='0x2002000' /><slave name='cfi_flash.uas' start='0x4000000' end='0x4800000' /><slave name='sram.avalon_slave' start='0x5000000' end='0x5200000' /><slave name='pll.pll_slave' start='0x8000140' end='0x8000150' /><slave name='sys_clk_timer.s1' start='0x8000160' end='0x8000180' /><slave name='jtag_uart.avalon_jtag_slave' start='0x80001A0' end='0x80001A8' /><slave name='sysid.control_slave' start='0x80001A8' end='0x80001B0' /><slave name='sysver_0.avalon_slave_0' start='0x80001C0' end='0x80001E0' /><slave name='timer_0.s1' start='0x8000200' end='0x8000220' /><slave name='timer_1.s1' start='0x8000220' end='0x8000240' /><slave name='timer_2.s1' start='0x8000240' end='0x8000260' /><slave name='timer_3.s1' start='0x8000260' end='0x8000280' /><slave name='timer_4.s1' start='0x8000280' end='0x80002A0' /><slave name='timer_5.s1' start='0x80002A0' end='0x80002C0' /><slave name='timer_6.s1' start='0x80002C0' end='0x80002E0' /><slave name='timer_7.s1' start='0x80002E0' end='0x8000300' /><slave name='timer_8.s1' start='0x8000300' end='0x8000320' /><slave name='timer_9.s1' start='0x8000320' end='0x8000340' /><slave name='timer_10.s1' start='0x8000340' end='0x8000360' /><slave name='timer_11.s1' start='0x8000360' end='0x8000380' /><slave name='timer_12.s1' start='0x8000380' end='0x80003A0' /><slave name='timer_13.s1' start='0x80003A0' end='0x80003C0' /><slave name='timer_14.s1' start='0x80003C0' end='0x80003E0' /><slave name='timer_15.s1' start='0x80003E0' end='0x8000400' /><slave name='key.s1' start='0x8000400' end='0x8000410' /><slave name='sw.s1' start='0x8000410' end='0x8000420' /><slave name='ledg.s1' start='0x8000420' end='0x8000430' /><slave name='ledr.s1' start='0x8000430' end='0x8000440' /><slave name='rs232.s1' start='0x8000440' end='0x8000460' /><slave name='i2c_scl.s1' start='0x8000460' end='0x8000470' /><slave name='i2c_sda.s1' start='0x8000470' end='0x8000480' /><slave name='eep_i2c_scl.s1' start='0x8000480' end='0x8000490' /><slave name='eep_i2c_sda.s1' start='0x8000490' end='0x80004A0' /><slave name='lcd.control_slave' start='0x80004A0' end='0x80004B0' /><slave name='ir.s1' start='0x80004B0' end='0x80004C0' /><slave name='sd_clk.s1' start='0x80004C0' end='0x80004D0' /><slave name='sd_cmd.s1' start='0x80004D0' end='0x80004E0' /><slave name='sd_dat.s1' start='0x80004E0' end='0x80004F0' /><slave name='sd_wp_n.s1' start='0x80004F0' end='0x8000500' /><slave name='seg7.avalon_slave' start='0x8000500' end='0x8000520' /><slave name='sma_in.s1' start='0x8001000' end='0x8001010' /><slave name='sma_out.s1' start='0x8001010' end='0x8001020' /><slave name='audio.avalon_slave' start='0x8001020' end='0x8001040' /><slave name='usb.hc' start='0x8001040' end='0x8001048' /><slave name='usb.dc' start='0x8001050' end='0x8001058' /><slave name='can_top_0.avalon_slave_0' start='0x8020000' end='0x8020400' /><slave name='onchip_memory2.s1' start='0xA000000' end='0xA020000' /><slave name='vic_0.csr_access' start='0xF000000' end='0xF000400' /></address-map>]]></parameter>
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='sdram.s1' start='0x0' end='0x2000000' /><slave name='cpu.jtag_debug_module' start='0x2000000' end='0x2000800' /><slave name='ext_flash.uas' start='0x4000000' end='0x4800000' /><slave name='sram.avalon_slave' start='0x5000000' end='0x5200000' /><slave name='onchip_memory2.s1' start='0xA000000' end='0xA020000' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram.s1' start='0x0' end='0x2000000' /><slave name='cpu.jtag_debug_module' start='0x2000000' end='0x2000800' /><slave name='tse_mac.control_port' start='0x2000800' end='0x2000C00' /><slave name='sgdma_tx.csr' start='0x2000C00' end='0x2000C40' /><slave name='sgdma_rx.csr' start='0x2000C40' end='0x2000C80' /><slave name='uart_0.s1' start='0x2000D00' end='0x2000D20' /><slave name='uart_1.s1' start='0x2000D40' end='0x2000D60' /><slave name='descriptor_memory.s1' start='0x2001000' end='0x2002000' /><slave name='ext_flash.uas' start='0x4000000' end='0x4800000' /><slave name='sram.avalon_slave' start='0x5000000' end='0x5200000' /><slave name='pll.pll_slave' start='0x8000140' end='0x8000150' /><slave name='sys_clk_timer.s1' start='0x8000160' end='0x8000180' /><slave name='jtag_uart.avalon_jtag_slave' start='0x80001A0' end='0x80001A8' /><slave name='sysid.control_slave' start='0x80001A8' end='0x80001B0' /><slave name='sysver_0.avalon_slave_0' start='0x80001C0' end='0x80001E0' /><slave name='timer_0.s1' start='0x8000200' end='0x8000220' /><slave name='timer_1.s1' start='0x8000220' end='0x8000240' /><slave name='timer_2.s1' start='0x8000240' end='0x8000260' /><slave name='timer_3.s1' start='0x8000260' end='0x8000280' /><slave name='timer_4.s1' start='0x8000280' end='0x80002A0' /><slave name='timer_5.s1' start='0x80002A0' end='0x80002C0' /><slave name='timer_6.s1' start='0x80002C0' end='0x80002E0' /><slave name='timer_7.s1' start='0x80002E0' end='0x8000300' /><slave name='timer_8.s1' start='0x8000300' end='0x8000320' /><slave name='timer_9.s1' start='0x8000320' end='0x8000340' /><slave name='timer_10.s1' start='0x8000340' end='0x8000360' /><slave name='timer_11.s1' start='0x8000360' end='0x8000380' /><slave name='timer_12.s1' start='0x8000380' end='0x80003A0' /><slave name='timer_13.s1' start='0x80003A0' end='0x80003C0' /><slave name='timer_14.s1' start='0x80003C0' end='0x80003E0' /><slave name='timer_15.s1' start='0x80003E0' end='0x8000400' /><slave name='key.s1' start='0x8000400' end='0x8000410' /><slave name='sw.s1' start='0x8000410' end='0x8000420' /><slave name='ledg.s1' start='0x8000420' end='0x8000430' /><slave name='ledr.s1' start='0x8000430' end='0x8000440' /><slave name='rs232.s1' start='0x8000440' end='0x8000460' /><slave name='i2c_scl.s1' start='0x8000460' end='0x8000470' /><slave name='i2c_sda.s1' start='0x8000470' end='0x8000480' /><slave name='eep_i2c_scl.s1' start='0x8000480' end='0x8000490' /><slave name='eep_i2c_sda.s1' start='0x8000490' end='0x80004A0' /><slave name='lcd.control_slave' start='0x80004A0' end='0x80004B0' /><slave name='ir.s1' start='0x80004B0' end='0x80004C0' /><slave name='sd_clk.s1' start='0x80004C0' end='0x80004D0' /><slave name='sd_cmd.s1' start='0x80004D0' end='0x80004E0' /><slave name='sd_dat.s1' start='0x80004E0' end='0x80004F0' /><slave name='sd_wp_n.s1' start='0x80004F0' end='0x8000500' /><slave name='seg7.avalon_slave' start='0x8000500' end='0x8000520' /><slave name='sma_in.s1' start='0x8001000' end='0x8001010' /><slave name='sma_out.s1' start='0x8001010' end='0x8001020' /><slave name='audio.avalon_slave' start='0x8001020' end='0x8001040' /><slave name='usb.hc' start='0x8001040' end='0x8001048' /><slave name='usb.dc' start='0x8001050' end='0x8001058' /><slave name='can_top_0.avalon_slave_0' start='0x8020000' end='0x8020400' /><slave name='onchip_memory2.s1' start='0xA000000' end='0xA020000' /><slave name='vic_0.csr_access' start='0xF000000' end='0xF000400' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="100000000" />
   <parameter name="deviceFamilyName" value="Cyclone IV E" />
   <parameter name="internalIrqMaskSystemInfo" value="0" />
@@ -2370,15 +2370,15 @@
    version="13.1"
    enabled="1"
    name="tristate_conduit_pin_sharer_flash">
-  <parameter name="INTERFACE_INFO"><![CDATA[<info><slave name="tcs0"><master name="cfi_flash.tcm"><pin role="" width="1" type="Invalid" output_name="" output_enable_name="" input_name="" /><pin role="address" width="23" type="Output" output_name="tcm_address_out" output_enable_name="" input_name="" /><pin role="write_n" width="1" type="Output" output_name="tcm_write_n_out" output_enable_name="" input_name="" /><pin role="data" width="8" type="Bidirectional" output_name="tcm_data_out" output_enable_name="tcm_data_outen" input_name="tcm_data_in" /><pin role="read_n" width="1" type="Output" output_name="tcm_read_n_out" output_enable_name="" input_name="" /><pin role="chipselect_n" width="1" type="Output" output_name="tcm_chipselect_n_out" output_enable_name="" input_name="" /></master></slave></info>]]></parameter>
+  <parameter name="INTERFACE_INFO"><![CDATA[<info><slave name="tcs0"><master name="ext_flash.tcm"><pin role="" width="1" type="Invalid" output_name="" output_enable_name="" input_name="" /><pin role="address" width="23" type="Output" output_name="tcm_address_out" output_enable_name="" input_name="" /><pin role="write_n" width="1" type="Output" output_name="tcm_write_n_out" output_enable_name="" input_name="" /><pin role="data" width="8" type="Bidirectional" output_name="tcm_data_out" output_enable_name="tcm_data_outen" input_name="tcm_data_in" /><pin role="read_n" width="1" type="Output" output_name="tcm_read_n_out" output_enable_name="" input_name="" /><pin role="chipselect_n" width="1" type="Output" output_name="tcm_chipselect_n_out" output_enable_name="" input_name="" /></master></slave></info>]]></parameter>
   <parameter name="NUM_INTERFACES" value="1" />
-  <parameter name="MODULE_ORIGIN_LIST">cfi_flash.tcm,cfi_flash.tcm,cfi_flash.tcm,cfi_flash.tcm,cfi_flash.tcm</parameter>
+  <parameter name="MODULE_ORIGIN_LIST">ext_flash.tcm,ext_flash.tcm,ext_flash.tcm,ext_flash.tcm,ext_flash.tcm</parameter>
   <parameter name="SIGNAL_ORIGIN_LIST">address,read_n,write_n,data,chipselect_n</parameter>
   <parameter name="SHARED_SIGNAL_LIST">address_to_the_cfi_flash,read_n_to_the_cfi_flash,write_n_to_the_cfi_flash,tri_state_bridge_flash_data,select_n_to_the_cfi_flash</parameter>
   <parameter name="AUTO_CLK_CLOCK_RATE" value="100000000" />
   <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="10" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="10" />
-  <parameter name="AUTO_TRISTATECONDUIT_MASTERS"><![CDATA[<info><slave name="tcs0"><master name="cfi_flash.tcm"><port role="write_n_out" direction="output" width="1" /><port role="read_n_out" direction="output" width="1" /><port role="chipselect_n_out" direction="output" width="1" /><port role="request" direction="output" width="1" /><port role="grant" direction="input" width="1" /><port role="address_out" direction="output" width="23" /><port role="data_out" direction="output" width="8" /><port role="data_outen" direction="output" width="1" /><port role="data_in" direction="input" width="8" /></master></slave></info>]]></parameter>
+  <parameter name="AUTO_TRISTATECONDUIT_MASTERS"><![CDATA[<info><slave name="tcs0"><master name="ext_flash.tcm"><port role="write_n_out" direction="output" width="1" /><port role="read_n_out" direction="output" width="1" /><port role="chipselect_n_out" direction="output" width="1" /><port role="request" direction="output" width="1" /><port role="grant" direction="input" width="1" /><port role="address_out" direction="output" width="23" /><port role="data_out" direction="output" width="8" /><port role="data_outen" direction="output" width="1" /><port role="data_in" direction="input" width="8" /></master></slave></info>]]></parameter>
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
  </module>
@@ -2386,7 +2386,7 @@
    kind="altera_generic_tristate_controller"
    version="13.1"
    enabled="1"
-   name="cfi_flash">
+   name="ext_flash">
   <parameter name="TCM_ADDRESS_W" value="23" />
   <parameter name="TCM_DATA_W" value="8" />
   <parameter name="TCM_BYTEENABLE_W" value="1" />
@@ -3276,12 +3276,12 @@
    version="13.1"
    start="tristate_conduit_pin_sharer_flash.tcm"
    end="tristate_conduit_bridge_flash.tcs" />
- <connection kind="clock" version="13.1" start="pll.c0" end="cfi_flash.clk" />
+ <connection kind="clock" version="13.1" start="pll.c0" end="ext_flash.clk" />
  <connection
    kind="avalon"
    version="13.1"
    start="cpu.data_master"
-   end="cfi_flash.uas">
+   end="ext_flash.uas">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x04000000" />
   <parameter name="defaultConnection" value="false" />
@@ -3290,16 +3290,11 @@
    kind="avalon"
    version="13.1"
    start="cpu.instruction_master"
-   end="cfi_flash.uas">
+   end="ext_flash.uas">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x04000000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
- <connection
-   kind="tristate_conduit"
-   version="13.1"
-   start="cfi_flash.tcm"
-   end="tristate_conduit_pin_sharer_flash.tcs0" />
  <connection
    kind="reset"
    version="13.1"
@@ -3820,12 +3815,12 @@
    kind="reset"
    version="13.1"
    start="clk_50.clk_reset"
-   end="cfi_flash.reset" />
+   end="ext_flash.reset" />
  <connection
    kind="reset"
    version="13.1"
    start="cpu.jtag_debug_module_reset"
-   end="cfi_flash.reset" />
+   end="ext_flash.reset" />
  <connection
    kind="clock"
    version="13.1"
@@ -4004,6 +3999,11 @@
    version="13.1"
    start="cpu.jtag_debug_module_reset"
    end="descriptor_memory.reset1" />
+ <connection
+   kind="tristate_conduit"
+   version="13.1"
+   start="ext_flash.tcm"
+   end="tristate_conduit_pin_sharer_flash.tcs0" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="0" />
 </system>

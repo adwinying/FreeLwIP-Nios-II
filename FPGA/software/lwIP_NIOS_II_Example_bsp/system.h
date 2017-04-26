@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'DE2_115_SOPC'
  * SOPC Builder design path: C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_SOPC.sopcinfo
  *
- * Generated: Wed Apr 05 15:22:49 JST 2017
+ * Generated: Mon Apr 24 18:15:35 JST 2017
  */
 
 /*
@@ -346,25 +346,6 @@
 
 
 /*
- * cfi_flash configuration
- *
- */
-
-#define ALT_MODULE_CLASS_cfi_flash altera_generic_tristate_controller
-#define CFI_FLASH_BASE 0x4000000
-#define CFI_FLASH_HOLD_VALUE 60
-#define CFI_FLASH_IRQ -1
-#define CFI_FLASH_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define CFI_FLASH_NAME "/dev/cfi_flash"
-#define CFI_FLASH_SETUP_VALUE 60
-#define CFI_FLASH_SIZE 8388608u
-#define CFI_FLASH_SPAN 8388608
-#define CFI_FLASH_TIMING_UNITS "ns"
-#define CFI_FLASH_TYPE "altera_generic_tristate_controller"
-#define CFI_FLASH_WAIT_VALUE 160
-
-
-/*
  * descriptor_memory configuration
  *
  */
@@ -445,6 +426,25 @@
 #define EEP_I2C_SDA_RESET_VALUE 0
 #define EEP_I2C_SDA_SPAN 16
 #define EEP_I2C_SDA_TYPE "altera_avalon_pio"
+
+
+/*
+ * ext_flash configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_ext_flash altera_generic_tristate_controller
+#define EXT_FLASH_BASE 0x4000000
+#define EXT_FLASH_HOLD_VALUE 60
+#define EXT_FLASH_IRQ -1
+#define EXT_FLASH_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define EXT_FLASH_NAME "/dev/ext_flash"
+#define EXT_FLASH_SETUP_VALUE 60
+#define EXT_FLASH_SIZE 8388608u
+#define EXT_FLASH_SPAN 8388608
+#define EXT_FLASH_TIMING_UNITS "ns"
+#define EXT_FLASH_TYPE "altera_generic_tristate_controller"
+#define EXT_FLASH_WAIT_VALUE 160
 
 
 /*
@@ -1170,7 +1170,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1491372717
+#define SYSID_TIMESTAMP 1493023976
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

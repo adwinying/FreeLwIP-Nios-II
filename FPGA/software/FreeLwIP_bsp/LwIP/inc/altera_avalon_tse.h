@@ -31,7 +31,7 @@
 #ifndef __ALTERA_AVALON_TSE_H__
 #define __ALTERA_AVALON_TSE_H__
 
-#define ALT_DEBUG
+//#define ALT_DEBUG
 
 #include "triple_speed_ethernet_regs.h"
 #include "system.h"     /* check if SGDMA is used */
@@ -63,6 +63,7 @@ extern "C"
 #define ENP_PARAM        -10  /* bad parameter */
 
 #define MAXNETS            8  /* max ifaces to support at one time */
+
 
 #ifdef ALT_DEBUG
 #define tse_dprintf(level, fmt, rest...)        \

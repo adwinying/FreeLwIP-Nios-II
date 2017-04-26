@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'DE2_115_SOPC'
  * SOPC Builder design path: C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_SOPC.sopcinfo
  *
- * Generated: Mon Apr 03 17:04:45 JST 2017
+ * Generated: Mon Apr 24 18:15:35 JST 2017
  */
 
 /*
@@ -53,7 +53,7 @@ MEMORY
     sdram_BEFORE_EXCEPTION : ORIGIN = 0x0, LENGTH = 32
     sdram : ORIGIN = 0x20, LENGTH = 33554400
     descriptor_memory : ORIGIN = 0x2001000, LENGTH = 4096
-    cfi_flash : ORIGIN = 0x4000000, LENGTH = 8388608
+    ext_flash : ORIGIN = 0x4000000, LENGTH = 8388608
     reset : ORIGIN = 0x5000000, LENGTH = 32
     sram : ORIGIN = 0x5000020, LENGTH = 2097120
     onchip_memory2 : ORIGIN = 0xa000000, LENGTH = 131072
@@ -62,7 +62,7 @@ MEMORY
 /* Define symbols for each memory base-address */
 __alt_mem_sdram = 0x0;
 __alt_mem_descriptor_memory = 0x2001000;
-__alt_mem_cfi_flash = 0x4000000;
+__alt_mem_ext_flash = 0x4000000;
 __alt_mem_sram = 0x5000000;
 __alt_mem_onchip_memory2 = 0xa000000;
 
@@ -353,15 +353,15 @@ SECTIONS
      *
      */
 
-    .cfi_flash : AT ( LOADADDR (.descriptor_memory) + SIZEOF (.descriptor_memory) )
+    .ext_flash : AT ( LOADADDR (.descriptor_memory) + SIZEOF (.descriptor_memory) )
     {
-        PROVIDE (_alt_partition_cfi_flash_start = ABSOLUTE(.));
-        *(.cfi_flash .cfi_flash. cfi_flash.*)
+        PROVIDE (_alt_partition_ext_flash_start = ABSOLUTE(.));
+        *(.ext_flash .ext_flash. ext_flash.*)
         . = ALIGN(4);
-        PROVIDE (_alt_partition_cfi_flash_end = ABSOLUTE(.));
-    } > cfi_flash
+        PROVIDE (_alt_partition_ext_flash_end = ABSOLUTE(.));
+    } > ext_flash
 
-    PROVIDE (_alt_partition_cfi_flash_load_addr = LOADADDR(.cfi_flash));
+    PROVIDE (_alt_partition_ext_flash_load_addr = LOADADDR(.ext_flash));
 
     /*
      *
@@ -370,7 +370,7 @@ SECTIONS
      *
      */
 
-    .sram : AT ( LOADADDR (.cfi_flash) + SIZEOF (.cfi_flash) )
+    .sram : AT ( LOADADDR (.ext_flash) + SIZEOF (.ext_flash) )
     {
         PROVIDE (_alt_partition_sram_start = ABSOLUTE(.));
         *(.sram .sram. sram.*)

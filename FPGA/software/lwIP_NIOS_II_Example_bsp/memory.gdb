@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu' in SOPC Builder design 'DE2_115_SOPC'
 # SOPC Builder design path: C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_SOPC.sopcinfo
 #
-# Generated: Mon Apr 03 17:04:45 JST 2017
+# Generated: Mon Apr 24 18:15:35 JST 2017
 
 # DO NOT MODIFY THIS FILE
 #
@@ -52,7 +52,7 @@ memory 0x0 0x2000000 cache
 # descriptor_memory
 memory 0x2001000 0x2002000 cache
 
-# cfi_flash
+# ext_flash
 memory 0x4000000 0x4800000 cache
 
 # sram

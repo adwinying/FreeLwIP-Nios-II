@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'DE2_115_SOPC'
  * SOPC Builder design path: C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_SOPC.sopcinfo
  *
- * Generated: Mon Apr 03 17:04:45 JST 2017
+ * Generated: Mon Apr 24 18:15:35 JST 2017
  */
 
 /*
@@ -65,10 +65,10 @@
  *
  */
 
-#define CFI_FLASH_REGION_BASE 0x4000000
-#define CFI_FLASH_REGION_SPAN 8388608
 #define DESCRIPTOR_MEMORY_REGION_BASE 0x2001000
 #define DESCRIPTOR_MEMORY_REGION_SPAN 4096
+#define EXT_FLASH_REGION_BASE 0x4000000
+#define EXT_FLASH_REGION_SPAN 8388608
 #define ONCHIP_MEMORY2_REGION_BASE 0xa000000
 #define ONCHIP_MEMORY2_REGION_SPAN 131072
 #define RESET_REGION_BASE 0x5000000

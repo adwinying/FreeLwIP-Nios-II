@@ -203,13 +203,13 @@ module DE2_115_SOPC_mm_interconnect_0_addr_router
     // ( 0x2000000 .. 0x2000800 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 28'h2000000   ) begin
             src_channel = 19'b00001;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
     // ( 0x4000000 .. 0x4800000 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 28'h4000000   ) begin
             src_channel = 19'b10000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
     // ( 0x5000000 .. 0x5200000 )

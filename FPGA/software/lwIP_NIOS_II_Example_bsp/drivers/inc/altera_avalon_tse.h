@@ -61,7 +61,7 @@ extern "C"
 #define ENP_PARAM        -10  /* bad parameter */
 
 #define MAXNETS            8  /* max ifaces to support at one time */
-
+#define ALT_DEBUG
 #ifdef ALT_DEBUG
 #define tse_dprintf(level, fmt, rest...)        \
     if(level <= TSE_DEBUG_LEVEL) {              \

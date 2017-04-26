@@ -53,6 +53,9 @@
 #include "lwip/stats.h"
 #include "lwip/err.h"
 
+//ADDON:
+typedef struct t_tse_mac_info T_TSE_SOFTC;
+
 /* Base-Structure for all lwIP TSE information */
 typedef struct _lwip_tse_info 
 {
@@ -122,7 +125,7 @@ int tse_mac_init(int iface, struct ethernetif *ethernetif)
    tse[iface].ethernetif = ethernetif;
    ethernetif->iface = iface;
    ethernetif->tse_info = &tse[iface];
-	
+
    if (tse_hw->ext_desc_mem == 1)
       tse[iface].desc = (alt_sgdma_descriptor *) tse_hw->desc_mem_base;
    else
@@ -137,7 +140,6 @@ int tse_mac_init(int iface, struct ethernetif *ethernetif)
    
    /* Get the Rx and Tx SGDMA addresses */
    sgdma_tx_dev = alt_avalon_sgdma_open(tse_hw->tse_sgdma_tx);
-   
    if(!sgdma_tx_dev) 
       {
       dprintf(("[triple_speed_ethernet_init] Error opening TX SGDMA\n"));
@@ -150,6 +152,7 @@ int tse_mac_init(int iface, struct ethernetif *ethernetif)
       dprintf(("[triple_speed_ethernet_init] Error opening RX SGDMA\n"));
       return ENP_RESOURCE;
       }
+
 
    /* Initialize mtip_mac_trans_info structure with values from <system.h>*/
 
@@ -164,9 +167,9 @@ int tse_mac_init(int iface, struct ethernetif *ethernetif)
    
    /* reset the PHY if necessary */
    result = getPHYSpeed(tse[iface].mi.base);
-   speed = (result >> 1) & 0x07;
+   speed  = (result >> 1) & 0x07;
    duplex = result & 0x01;
-    
+
    /* reset the mac */ 
    IOWR_ALTERA_TSEMAC_CMD_CONFIG(tse[iface].mi.base,
                              mmac_cc_SW_RESET_mask | 
@@ -186,9 +189,9 @@ int tse_mac_init(int iface, struct ethernetif *ethernetif)
 
    dat = IORD_ALTERA_TSEMAC_CMD_CONFIG(tse[iface].mi.base);
    if( (dat & 0x03) != 0 ) 
-      dprintf(("WARN: RX/TX not disabled after reset... missing PHY clock? CMD_CONFIG=0x%08x\n", dat));
+      printf("WARN: RX/TX not disabled after reset... missing PHY clock? CMD_CONFIG=0x%08x\n", dat);
    else
-      dprintf(("OK, x=%d, CMD_CONFIG=0x%08x\n", x, dat));
+      printf("OK, x=%d, CMD_CONFIG=0x%08x\n", x, dat);
   
    /* Initialize MAC registers */
    IOWR_ALTERA_TSEMAC_FRM_LENGTH(mi_base, PBUF_POOL_BUFSIZE+ETH_PAD_SIZE); 
@@ -200,7 +203,7 @@ int tse_mac_init(int iface, struct ethernetif *ethernetif)
    IOWR_ALTERA_TSEMAC_TX_SECTION_FULL(mi_base,  0); //32/4; // start transmit when there are 48 bytes
    IOWR_ALTERA_TSEMAC_RX_SECTION_EMPTY(mi_base, tse_hw->tse_rx_depth - 16); //4000/4);
    IOWR_ALTERA_TSEMAC_RX_SECTION_FULL(mi_base,  0);
-
+   
    /* Enable TX shift 16 for removing two bytes from the start of all transmitted frames */
    IOWR_ALTERA_TSEMAC_TX_CMD_STAT(tse[iface].mi.base,ALTERA_TSEMAC_TX_CMD_STAT_TXSHIFT16_MSK);
  
@@ -223,17 +226,6 @@ int tse_mac_init(int iface, struct ethernetif *ethernetif)
       dprintf(("[tse_mac_init] Error: Incompatible %d value with RX_CMD_STAT register return RxShift16 value. \n",ETH_PAD_SIZE));
       return ERR_IF;
       }
- 
-   /* Set the MAC address */  
-   IOWR_ALTERA_TSEMAC_MAC_0(mi_base,
-                           ((int)((unsigned char) ethernetif->ethaddr->addr[0]) | 
-                            (int)((unsigned char) ethernetif->ethaddr->addr[1] <<  8) |
-                            (int)((unsigned char) ethernetif->ethaddr->addr[2] << 16) | 
-                            (int)((unsigned char) ethernetif->ethaddr->addr[3] << 24)));
-  
-   IOWR_ALTERA_TSEMAC_MAC_1(mi_base, 
-                           (((int)((unsigned char) ethernetif->ethaddr->addr[4]) | 
-                             (int)((unsigned char) ethernetif->ethaddr->addr[5] <<  8)) & 0xFFFF));
    
    /* enable MAC */
    dat = ALTERA_TSEMAC_CMD_TX_ENA_MSK       |
@@ -294,10 +286,19 @@ int tse_mac_init(int iface, struct ethernetif *ethernetif)
       }
           
    IOWR_ALTERA_TSEMAC_CMD_CONFIG(tse[iface].mi.base, dat);
-   dprintf(("\nMAC post-initialization: CMD_CONFIG=0x%08x\n", 
-    IORD_ALTERA_TSEMAC_CMD_CONFIG(tse[iface].mi.base)));
+   printf("\nMAC post-initialization: CMD_CONFIG=0x%08x\n", 
+    IORD_ALTERA_TSEMAC_CMD_CONFIG(tse[iface].mi.base));
   
-  
+   /* Set the MAC address */
+     IOWR_ALTERA_TSEMAC_MAC_0(mi_base,
+                             ((int)((unsigned char) ethernetif->ethaddr->addr[0]) |
+                              (int)((unsigned char) ethernetif->ethaddr->addr[1] <<  8) |
+                              (int)((unsigned char) ethernetif->ethaddr->addr[2] << 16) |
+                              (int)((unsigned char) ethernetif->ethaddr->addr[3] << 24)));
+
+     IOWR_ALTERA_TSEMAC_MAC_1(mi_base,
+                             (((int)((unsigned char) ethernetif->ethaddr->addr[4]) |
+                               (int)((unsigned char) ethernetif->ethaddr->addr[5] <<  8)) & 0xFFFF));
                                 
    alt_avalon_sgdma_register_callback(tse[iface].mi.rx_sgdma,
 #ifndef ALTERA_TSE_IRQ_R
@@ -308,9 +309,26 @@ int tse_mac_init(int iface, struct ethernetif *ethernetif)
         (alt_u16)ALTERA_TSE_SGDMA_INTR_MASK,(void*)(&tse[iface]));
     
    tse_sgdma_read_init(&tse[iface]);
+   //tse_sgdma_write_init(&tse[iface]);
+   
+
    pmac_info = alt_tse_get_mac_info(mi_base);
    alt_tse_phy_wr_mdio_addr(pmac_info->pphy_info, pmac_info->pphy_info->mdio_address);
    ethernetif->link_alive = alt_tse_phy_rd_mdio_reg(pmac_info->pphy_info, TSE_PHY_MDIO_STATUS, TSE_PHY_MDIO_STATUS_AN_COMPLETE, 1) != 0;
+
+
+
+   //IOWR_ALTERA_AVALON_SGDMA_CONTROL(tse[iface].mi.tx_sgdma->base,ALTERA_AVALON_SGDMA_CONTROL_SOFTWARERESET_MSK);
+   //IOWR_ALTERA_AVALON_SGDMA_CONTROL(tse[iface].mi.tx_sgdma->base,ALTERA_AVALON_SGDMA_CONTROL_SOFTWARERESET_MSK);
+   //IOWR_ALTERA_AVALON_SGDMA_CONTROL(tse[iface].mi.tx_sgdma->base, 0x0);
+   //IOWR_ALTERA_AVALON_SGDMA_CONTROL(tse[iface].mi.tx_sgdma, 0xff);
+
+   //IOWR_ALTERA_AVALON_SGDMA_CONTROL(tse[iface].mi.rx_sgdma->base,ALTERA_AVALON_SGDMA_CONTROL_SOFTWARERESET_MSK);
+   //IOWR_ALTERA_AVALON_SGDMA_CONTROL(tse[iface].mi.rx_sgdma->base,ALTERA_AVALON_SGDMA_CONTROL_SOFTWARERESET_MSK);
+   //IOWR_ALTERA_AVALON_SGDMA_CONTROL(tse[iface].mi.rx_sgdma->base, 0x0);
+   //IOWR_ALTERA_AVALON_SGDMA_CONTROL(tse[iface].mi.rx_sgdma, 0xff);
+   
+
    return ethernetif->link_alive;
 }
 
@@ -335,13 +353,12 @@ int tse_sgdma_read_init(lwip_tse_info* tse_ptr)
          0);          // don't write to constant address
 
 
-   dprintf(("[tse_sgdma_read_init] RX descriptor chain desc (%d depth) created\n",0)); 
+   printf("[tse_sgdma_read_init] RX descriptor chain desc (%d depth) created\n",0); 
    
    tse_mac_aRxRead( &tse_ptr->mi, &tse_ptr->desc[ALTERA_TSE_FIRST_RX_SGDMA_DESC_OFST]);
   
    return SUCCESS;
 }
-
 
 /* @Function Description -  TSE Driver SGDMA RX ISR callback function
  *                          

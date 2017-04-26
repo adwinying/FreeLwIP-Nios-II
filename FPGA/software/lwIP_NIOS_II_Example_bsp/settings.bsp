@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2017/04/05 15:22:46</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1491373366705</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>2017/04/24 18:53:44</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1493027624173</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\cygwin\home\adwinying\FreeLwIP-Nios-II\FPGA\software\lwIP_NIOS_II_Example_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\cygwin\home\adwinying\FreeLwIP-Nios-II\FPGA\DE2_115_SOPC.sopcinfo</SopcDesignFile>
@@ -266,7 +266,7 @@
                 <SettingName>hal.make.bsp_cflags_defined_symbols</SettingName>
                 <Identifier>BSP_CFLAGS_DEFINED_SYMBOLS</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>none</Value>
+                <Value>-DTSE_MY_SYSTEM</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>makefile_variable</DestinationFile>
                 <Description>Preprocessor macros to define. A macro definition in this setting has the same effect as a "#define" in source code. Adding "-DALT_DEBUG" to this setting has the same effect as "#define ALT_DEBUG" in a souce file. Adding "-DFOO=1" to this setting is equivalent to the macro "#define FOO 1" in a source file. Macros defined with this setting are applied to all .S, .c, and C++ files in the BSP. This setting defines the value of BSP_CFLAGS_DEFINED_SYMBOLS in the BSP Makefile.</Description>
@@ -2141,7 +2141,7 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>cfi_flash</slaveDescriptor>
+                <slaveDescriptor>ext_flash</slaveDescriptor>
                 <addressRange>0x04000000 - 0x047FFFFF</addressRange>
                 <addressSpan>8388608</addressSpan>
                 <attributes>flash, memory, non-volatile</attributes>

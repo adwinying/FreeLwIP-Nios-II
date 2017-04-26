@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'DE2_115_SOPC'
  * SOPC Builder design path: C:/cygwin/home/adwinying/FreeLwIP-Nios-II/FPGA/DE2_115_SOPC.sopcinfo
  *
- * Generated: Mon Apr 03 17:04:45 JST 2017
+ * Generated: Mon Apr 24 18:15:35 JST 2017
  */
 
 /*
@@ -73,7 +73,7 @@
  */
 
 ALTERA_VIC_IRQ_INSTANCE ( VIC_0, vic_0);
-ALTERA_AVALON_CFI_FLASH_INSTANCE ( CFI_FLASH, cfi_flash);
+ALTERA_AVALON_CFI_FLASH_INSTANCE ( EXT_FLASH, ext_flash);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART, jtag_uart);
 ALTERA_AVALON_LCD_16207_INSTANCE ( LCD, lcd);
 ALTERA_AVALON_SGDMA_INSTANCE ( SGDMA_RX, sgdma_rx);
@@ -139,7 +139,7 @@ void alt_sys_init( void )
     ALTERA_AVALON_TIMER_INIT ( TIMER_7, timer_7);
     ALTERA_AVALON_TIMER_INIT ( TIMER_8, timer_8);
     ALTERA_AVALON_TIMER_INIT ( TIMER_9, timer_9);
-    ALTERA_AVALON_CFI_FLASH_INIT ( CFI_FLASH, cfi_flash);
+    ALTERA_AVALON_CFI_FLASH_INIT ( EXT_FLASH, ext_flash);
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART, jtag_uart);
     ALTERA_AVALON_LCD_16207_INIT ( LCD, lcd);
     ALTERA_AVALON_SGDMA_INIT ( SGDMA_RX, sgdma_rx);

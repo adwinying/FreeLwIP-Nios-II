@@ -135,6 +135,15 @@ BSP_ASFLAGS = -Wa,-gdwarf2
 # BSP_CFLAGS_DEBUG in Makefile. 
 BSP_CFLAGS_DEBUG = -g
 
+# Preprocessor macros to define. A macro definition in this setting has the 
+# same effect as a "#define" in source code. Adding "-DALT_DEBUG" to this 
+# setting has the same effect as "#define ALT_DEBUG" in a souce file. Adding 
+# "-DFOO=1" to this setting is equivalent to the macro "#define FOO 1" in a 
+# source file. Macros defined with this setting are applied to all .S, .c, and 
+# C++ files in the BSP. This setting defines the value of 
+# BSP_CFLAGS_DEFINED_SYMBOLS in the BSP Makefile. 
+BSP_CFLAGS_DEFINED_SYMBOLS = -DTSE_MY_SYSTEM
+
 # C/C++ compiler optimization level. "-O0" = no optimization,"-O2" = "normal" 
 # optimization, etc. "-O0" is recommended for code that you want to debug since 
 # compiler optimization can remove variables and produce non-sequential 

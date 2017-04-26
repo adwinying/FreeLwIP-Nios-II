@@ -222,7 +222,7 @@ module DE2_115_SOPC_mm_interconnect_0_addr_router_001
     // ( 0x2000000 .. 0x2000800 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 28'h2000000   ) begin
             src_channel = 19'b0000000000000000001;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
     // ( 0x2000800 .. 0x2000c00 )
@@ -258,13 +258,13 @@ module DE2_115_SOPC_mm_interconnect_0_addr_router_001
     // ( 0x2001000 .. 0x2002000 )
     if ( {address[RG:PAD7],{PAD7{1'b0}}} == 28'h2001000   ) begin
             src_channel = 19'b1000000000000000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
     // ( 0x4000000 .. 0x4800000 )
     if ( {address[RG:PAD8],{PAD8{1'b0}}} == 28'h4000000   ) begin
             src_channel = 19'b0000000000000010000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
     // ( 0x5000000 .. 0x5200000 )
@@ -276,7 +276,7 @@ module DE2_115_SOPC_mm_interconnect_0_addr_router_001
     // ( 0x8000000 .. 0x8000800 )
     if ( {address[RG:PAD10],{PAD10{1'b0}}} == 28'h8000000   ) begin
             src_channel = 19'b0000100000000000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end
 
     // ( 0x8001000 .. 0x8001010 )

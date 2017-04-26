@@ -29,7 +29,7 @@ module DE2_115_SOPC_tristate_conduit_pin_sharer_flash_pin_sharer (
 
 // *** Arbiter Request Interface
 
-    ,output logic arb_cfi_flash_tcm 
+    ,output logic arb_ext_flash_tcm 
 		
 		     // ** Avalon TC Slave Interfaces
 
@@ -41,7 +41,7 @@ module DE2_115_SOPC_tristate_conduit_pin_sharer_flash_pin_sharer (
     ,input  logic tcs0_request 
     ,output logic tcs0_grant   
 
-  //cfi_flash.tcm signals
+  //ext_flash.tcm signals
     ,input  logic[ 22 :0 ] tcs0_tcm_address_out
     ,input  logic[ 0 :0 ] tcs0_tcm_read_n_out
     ,input  logic[ 0 :0 ] tcs0_tcm_write_n_out
@@ -87,7 +87,7 @@ module DE2_115_SOPC_tristate_conduit_pin_sharer_flash_pin_sharer (
 
    // Request Assignments
 
-    assign arb_cfi_flash_tcm = tcs0_request;
+    assign arb_ext_flash_tcm = tcs0_request;
    
    logic [ 1 - 1 : 0 ] concated_incoming_requests;
    

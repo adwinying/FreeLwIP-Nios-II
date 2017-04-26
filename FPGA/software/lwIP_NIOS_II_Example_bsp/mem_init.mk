@@ -161,46 +161,46 @@ RESET_ADDRESS ?= 0x05000000
 # Pre-Initialized Memory Descriptions
 #-------------------------------------
 
-# Memory: cfi_flash
-MEM_0 := cfi_flash
-$(MEM_0)_NAME := cfi_flash
+# Memory: descriptor_memory
+MEM_0 := DE2_115_SOPC_descriptor_memory
+$(MEM_0)_NAME := descriptor_memory
 $(MEM_0)_MEM_INIT_FILE_PARAM_NAME := INIT_FILE
+HEX_FILES += $(MEM_INIT_DIR)/$(MEM_0).hex
+MEM_INIT_INSTALL_FILES += $(MEM_INIT_INSTALL_DIR)/$(MEM_0).hex
 DAT_FILES += $(HDL_SIM_DIR)/$(MEM_0).dat
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_0).dat
 SYM_FILES += $(HDL_SIM_DIR)/$(MEM_0).sym
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_0).sym
-FLASH_FILES += $(MEM_0).flash
-$(MEM_0)_START := 0x04000000
-$(MEM_0)_END := 0x047fffff
-$(MEM_0)_HIERARCHICAL_PATH := cfi_flash
-$(MEM_0)_WIDTH := 8
+$(MEM_0)_START := 0x02001000
+$(MEM_0)_END := 0x02001fff
+$(MEM_0)_HIERARCHICAL_PATH := descriptor_memory
+$(MEM_0)_WIDTH := 32
 $(MEM_0)_ENDIANNESS := --little-endian-mem
 $(MEM_0)_CREATE_LANES := 0
-$(MEM_0)_CFI_FLAGS := --base=$($(MEM_0)_START) --end=$($(MEM_0)_END) --reset=$(RESET_ADDRESS)
-$(MEM_0)_BOOT_LOADER_FLAG := --boot="$(BOOT_LOADER_CFI)"
 
-.PHONY: cfi_flash
-cfi_flash: check_elf_exists $(HDL_SIM_DIR)/$(MEM_0).dat $(HDL_SIM_DIR)/$(MEM_0).sym $(MEM_0).flash
+.PHONY: descriptor_memory
+descriptor_memory: check_elf_exists $(MEM_INIT_DIR)/$(MEM_0).hex $(HDL_SIM_DIR)/$(MEM_0).dat $(HDL_SIM_DIR)/$(MEM_0).sym
 
-# Memory: descriptor_memory
-MEM_1 := DE2_115_SOPC_descriptor_memory
-$(MEM_1)_NAME := descriptor_memory
+# Memory: ext_flash
+MEM_1 := ext_flash
+$(MEM_1)_NAME := ext_flash
 $(MEM_1)_MEM_INIT_FILE_PARAM_NAME := INIT_FILE
-HEX_FILES += $(MEM_INIT_DIR)/$(MEM_1).hex
-MEM_INIT_INSTALL_FILES += $(MEM_INIT_INSTALL_DIR)/$(MEM_1).hex
 DAT_FILES += $(HDL_SIM_DIR)/$(MEM_1).dat
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_1).dat
 SYM_FILES += $(HDL_SIM_DIR)/$(MEM_1).sym
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_1).sym
-$(MEM_1)_START := 0x02001000
-$(MEM_1)_END := 0x02001fff
-$(MEM_1)_HIERARCHICAL_PATH := descriptor_memory
-$(MEM_1)_WIDTH := 32
+FLASH_FILES += $(MEM_1).flash
+$(MEM_1)_START := 0x04000000
+$(MEM_1)_END := 0x047fffff
+$(MEM_1)_HIERARCHICAL_PATH := ext_flash
+$(MEM_1)_WIDTH := 8
 $(MEM_1)_ENDIANNESS := --little-endian-mem
 $(MEM_1)_CREATE_LANES := 0
+$(MEM_1)_CFI_FLAGS := --base=$($(MEM_1)_START) --end=$($(MEM_1)_END) --reset=$(RESET_ADDRESS)
+$(MEM_1)_BOOT_LOADER_FLAG := --boot="$(BOOT_LOADER_CFI)"
 
-.PHONY: descriptor_memory
-descriptor_memory: check_elf_exists $(MEM_INIT_DIR)/$(MEM_1).hex $(HDL_SIM_DIR)/$(MEM_1).dat $(HDL_SIM_DIR)/$(MEM_1).sym
+.PHONY: ext_flash
+ext_flash: check_elf_exists $(HDL_SIM_DIR)/$(MEM_1).dat $(HDL_SIM_DIR)/$(MEM_1).sym $(MEM_1).flash
 
 # Memory: onchip_memory2
 MEM_2 := DE2_115_SOPC_onchip_memory2

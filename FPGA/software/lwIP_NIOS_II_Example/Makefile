@@ -201,6 +201,7 @@ C_SRCS += lwip/src/netif/ppp/ppp_oe.c
 C_SRCS += lwip/src/netif/ppp/randm.c
 C_SRCS += lwip/src/netif/ppp/vj.c
 C_SRCS += lwip/src/netif/slipif.c
+C_SRCS += drivers/tse_my_system.c
 CXX_SRCS :=
 ASM_SRCS :=
 
