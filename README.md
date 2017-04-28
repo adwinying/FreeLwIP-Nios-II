@@ -20,3 +20,5 @@ https://github.com/EngineeringSpirit/FreeLwIP-Nios-II
 - `FPGA/software/hello_world`: Hello world sample program for NIOS II.
 
 - `FPGA/software/sss`: Simple Socket Server(SSS) sample program for NIOS II. `lwIP_NIOS_II_example` should run if SSS can run without errors.
+
+**Please refer to the [wiki](https://github.com/adwinying/FreeLwIP-Nios-II/wiki) for more info.**
