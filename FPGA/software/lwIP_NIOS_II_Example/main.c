@@ -21,6 +21,7 @@
 #include "lwip/netif.h"
 #include "lwip/dhcp.h"
 #include "lwip/tcp.h"
+#include "lwip/tcp_impl.h"
 #include "lwip/stats.h"
 #include "lwip/ip_frag.h"
 #include "lwip/ip_addr.h"

@@ -142,7 +142,7 @@ BSP_CFLAGS_DEBUG = -g
 # source file. Macros defined with this setting are applied to all .S, .c, and 
 # C++ files in the BSP. This setting defines the value of 
 # BSP_CFLAGS_DEFINED_SYMBOLS in the BSP Makefile. 
-BSP_CFLAGS_DEFINED_SYMBOLS = -DTSE_MY_SYSTEM
+BSP_CFLAGS_DEFINED_SYMBOLS = -DTSE_MY_SYSTEM -DALT_DEBUG
 
 # C/C++ compiler optimization level. "-O0" = no optimization,"-O2" = "normal" 
 # optimization, etc. "-O0" is recommended for code that you want to debug since 

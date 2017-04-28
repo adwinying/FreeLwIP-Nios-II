@@ -186,7 +186,6 @@ C_SRCS += lwip/src/core/tcp_out.c
 C_SRCS += lwip/src/core/udp.c
 C_SRCS += lwip/src/netif/etharp.c
 C_SRCS += lwip/src/netif/ethernetif.c
-C_SRCS += lwip/src/netif/loopif.c
 C_SRCS += lwip/src/netif/ppp/auth.c
 C_SRCS += lwip/src/netif/ppp/chap.c
 C_SRCS += lwip/src/netif/ppp/chpms.c
@@ -202,6 +201,8 @@ C_SRCS += lwip/src/netif/ppp/randm.c
 C_SRCS += lwip/src/netif/ppp/vj.c
 C_SRCS += lwip/src/netif/slipif.c
 C_SRCS += drivers/tse_my_system.c
+C_SRCS += lwip/src/core/def.c
+C_SRCS += lwip/src/core/timers.c
 CXX_SRCS :=
 ASM_SRCS :=
 

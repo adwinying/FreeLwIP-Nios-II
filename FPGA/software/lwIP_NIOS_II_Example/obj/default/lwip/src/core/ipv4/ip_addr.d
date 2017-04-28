@@ -2,7 +2,7 @@ obj/default/lwip/src/core/ipv4/ip_addr.o: lwip/src/core/ipv4/ip_addr.c \
  lwip/src/include/lwip/opt.h drivers/lwipopts.h \
  lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h \
  drivers/arch/cc.h lwip/src/include/ipv4/lwip/ip_addr.h \
- lwip/src/include/ipv4/lwip/inet.h drivers/arch/bpstruct.h \
+ lwip/src/include/lwip/def.h drivers/arch/bpstruct.h \
  drivers/arch/epstruct.h lwip/src/include/lwip/netif.h \
  lwip/src/include/lwip/err.h lwip/src/include/lwip/pbuf.h
 
@@ -18,7 +18,7 @@ drivers/arch/cc.h:
 
 lwip/src/include/ipv4/lwip/ip_addr.h:
 
-lwip/src/include/ipv4/lwip/inet.h:
+lwip/src/include/lwip/def.h:
 
 drivers/arch/bpstruct.h:
 
