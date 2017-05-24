@@ -43,8 +43,8 @@
 #include <system.h>
 #include <alt_types.h>
 
-//#define LWIP_NOASSERT					0
-#define LWIP_DEBUG						1
+#define LWIP_NOASSERT					1
+//#define LWIP_DEBUG						1
 
 // Set altera typedefs for LwIP (in-case someone chooses a word size different from 32bits)
 typedef alt_u8							u8_t;
@@ -134,9 +134,6 @@ typedef u32_t							ipaddr_t;
 
 // Redefine memory align functionality
 #define LWIP_MEM_ALIGN(addr)			((void *)((((mem_ptr_t)(addr) + MEM_ALIGNMENT - 1) & ~(mem_ptr_t)(MEM_ALIGNMENT-1))))
-
-// Implement add a random number generator for IGMP support
-#define LWIP_RAND()						rand()
 
 // Some default math stuff
 #ifndef KB

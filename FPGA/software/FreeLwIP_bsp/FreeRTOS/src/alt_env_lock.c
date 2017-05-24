@@ -28,7 +28,7 @@
 *                                                                             *
 ******************************************************************************/
 
-// Provided by Engineering Spirit (c) 2014
+// Provided by Engineering Spirit (c) 2012
 
 #include "system.h"
 
@@ -46,15 +46,22 @@
 #include "semphr.h"
 #include "task.h"
 
+/* semaphore to protect the heap */
+
+xSemaphoreHandle alt_envsem;
+
 /* __env_lock needs to provide recursive mutex locking */
 
 void __env_lock ( struct _reent *_r )
 {
 #if OS_THREAD_SAFE_NEWLIB
-	if (xTaskGetSchedulerState() == taskSCHEDULER_NOT_STARTED)
+	if (!xTaskGetSchedulerState())
 		return;
 
-	vTaskSuspendAll();
+	// wait for the mutex to be released
+	while (xSemaphoreTakeRecursive(alt_envsem, 10) != pdTRUE)
+		vTaskDelay(1);
+
 #endif /* OS_THREAD_SAFE_NEWLIB */
 	return;
 }
@@ -64,10 +71,10 @@ void __env_lock ( struct _reent *_r )
 void __env_unlock ( struct _reent *_r )
 {
 #if OS_THREAD_SAFE_NEWLIB
-	if (!xTaskGetSchedulerState() == taskSCHEDULER_NOT_STARTED)
+	if (!xTaskGetSchedulerState())
 		return;
 	  
-	xTaskResumeAll();
+	xSemaphoreGiveRecursive(alt_envsem);
 #endif /* OS_THREAD_SAFE_NEWLIB */
 }
 
