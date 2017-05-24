@@ -1,0 +1,832 @@
+Makefile:572: ターゲット 'lwip_test.o' が同一ルール内で複数回与えられました
+Makefile:575: ターゲット 'lwip_test.s' が同一ルール内で複数回与えられました
+Makefile:610: ターゲット 'lwip_test.d' が同一ルール内で複数回与えられました
+if ! [ -f Makefile.depend ]; then \
+	rm -f Os_Lcfg.timestamp Os_Lcfg.c Os_Lcfg.h Os_Cfg.h ; \
+	rm -f cfg1_out.c cfg1_out.o cfg1_out.exe cfg1_out.syms cfg1_out.srec; \
+	rm -f offset.h; \
+fi
+rm -f Makefile.depend
+Generating Makefile.depend.
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:113:0: warning: "EDEADLK" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:73:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:114:0: warning: "ENAMETOOLONG" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:111:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:115:0: warning: "ENOLCK" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:74:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:116:0: warning: "ENOSYS" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:108:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:117:0: warning: "ENOTEMPTY" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:110:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:118:0: warning: "ELOOP" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:112:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:120:0: warning: "ENOMSG" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:63:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:121:0: warning: "EIDRM" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:64:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:122:0: warning: "ECHRNG" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:65:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:123:0: warning: "EL2NSYNC" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:66:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:124:0: warning: "EL3HLT" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:67:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:125:0: warning: "EL3RST" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:68:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:126:0: warning: "ELNRNG" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:69:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:127:0: warning: "EUNATCH" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:70:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:128:0: warning: "ENOCSI" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:71:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:129:0: warning: "EL2HLT" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:72:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:130:0: warning: "EBADE" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:75:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:131:0: warning: "EBADR" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:76:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:132:0: warning: "EXFULL" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:77:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:133:0: warning: "ENOANO" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:78:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:134:0: warning: "EBADRQC" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:79:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:135:0: warning: "EBADSLT" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:80:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:137:0: warning: "EDEADLOCK" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:81:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:139:0: warning: "EBFONT" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:82:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:152:0: warning: "EMULTIHOP" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:95:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:153:0: warning: "EDOTDOT" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:97:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:154:0: warning: "EBADMSG" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:98:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:155:0: warning: "EOVERFLOW" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:150:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:156:0: warning: "ENOTUNIQ" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:100:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:157:0: warning: "EBADFD" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:101:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:158:0: warning: "EREMCHG" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:102:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:159:0: warning: "ELIBACC" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:103:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:160:0: warning: "ELIBBAD" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:104:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:161:0: warning: "ELIBSCN" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:105:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:162:0: warning: "ELIBMAX" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:106:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:163:0: warning: "ELIBEXEC" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:107:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:164:0: warning: "EILSEQ" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:149:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:167:0: warning: "EUSERS" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:142:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:168:0: warning: "ENOTSOCK" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:119:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:169:0: warning: "EDESTADDRREQ" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:132:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:170:0: warning: "EMSGSIZE" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:133:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:171:0: warning: "EPROTOTYPE" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:118:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:172:0: warning: "ENOPROTOOPT" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:120:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:173:0: warning: "EPROTONOSUPPORT" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:134:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:174:0: warning: "ESOCKTNOSUPPORT" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:135:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:177:0: warning: "EAFNOSUPPORT" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:117:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:178:0: warning: "EADDRINUSE" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:123:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:179:0: warning: "EADDRNOTAVAIL" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:136:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:180:0: warning: "ENETDOWN" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:126:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:181:0: warning: "ENETUNREACH" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:125:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:182:0: warning: "ENETRESET" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:137:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:183:0: warning: "ECONNABORTED" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:124:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:186:0: warning: "EISCONN" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:138:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:187:0: warning: "ENOTCONN" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:139:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:188:0: warning: "ESHUTDOWN" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:121:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:189:0: warning: "ETOOMANYREFS" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:140:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:190:0: warning: "ETIMEDOUT" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:127:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:192:0: warning: "EHOSTDOWN" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:128:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:193:0: warning: "EHOSTUNREACH" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:129:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:194:0: warning: "EALREADY" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:131:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:195:0: warning: "EINPROGRESS" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:130:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:196:0: warning: "ESTALE" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:144:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:202:0: warning: "EDQUOT" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:143:0: note: this is the location of the previous definition
+In file included from ../../PRG/lwip_test/lwip/src/include/lwip/debug.h:35:0,
+                 from ../../PRG/lwip_test/drivers/lwipopts.h:44,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/opt.h:45,
+                 from ../../PRG/lwip_test/lwip/src/include/lwip/netif.h:35,
+                 from ../../PRG/lwip_test/drivers/alteraTseEthernetif.h:4,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:47:
+../../PRG/lwip_test/lwip/src/include/lwip/arch.h:204:0: warning: "ENOMEDIUM" redefined [enabled by default]
+In file included from c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/errno.h:9:0,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_sgdma.h:35,
+                 from ../../PRG/lwip_test/drivers/inc/altera_avalon_tse.h:96,
+                 from ../../PRG/lwip_test/drivers/lwip_tse_mac.c:42:
+c:\altera\13.1\nios2eds\bin\gnu\h-i686-mingw32\bin\../lib/gcc/nios2-elf/4.7.3/../../../../nios2-elf/include/sys/errno.h:146:0: note: this is the location of the previous definition
+Makefile:572: ターゲット 'lwip_test.o' が同一ルール内で複数回与えられました
+Makefile:575: ターゲット 'lwip_test.s' が同一ルール内で複数回与えられました
+Makefile:610: ターゲット 'lwip_test.d' が同一ルール内で複数回与えられました
+nios2-elf-gcc  -mhw-mul -mhw-div -falign-functions=32 -fno-common -g  -Wall -Wno-unused-label -Wpointer-arith -O2  -DTOPPERS_NIOS2_DEV_DE2_115 -DFUNCTION_ALIGN_SIZE=32 -DTOPPERS_ENABLE_SYS_TIMER  -DSYSTEM_BUS_WIDTH=32 -I. -I../../include -I../../arch -I../..  -I../../target/nios2_dev_gcc -I../../arch/nios2_gcc -I../../arch/gcc -I../../PRG/lwip_test -I../../PRG/lwip_test/HAL/inc -I../../PRG/lwip_test/lwip/src/include -I../../PRG/lwip_test/lwip/src/include/ipv4 -I../../PRG/lwip_test/drivers -I../../PRG/lwip_test/drivers/inc -nostdlib   -T ../../PRG/lwip_test/linker.x -T ../../target/nios2_dev_gcc/nios2_dev_de2_115.ld -o atk2-sc1.exe  \
+		-Wl,-Map,atk2-sc1.map \
+		 altera_avalon_cfi_flash.o altera_avalon_cfi_flash_amd.o altera_avalon_cfi_flash_intel.o altera_avalon_cfi_flash_table.o altera_avalon_jtag_uart_init.o altera_avalon_jtag_uart_read.o altera_avalon_jtag_uart_write.o altera_avalon_jtag_uart_ioctl.o altera_avalon_jtag_uart_fd.o altera_avalon_lcd_16207.o altera_avalon_lcd_16207_fd.o altera_avalon_sgdma.o altera_avalon_sysid_qsys.o altera_avalon_timer_sc.o altera_avalon_timer_ts.o altera_avalon_timer_vars.o altera_avalon_uart_fd.o altera_avalon_uart_init.o altera_avalon_uart_ioctl.o altera_avalon_uart_read.o altera_avalon_uart_write.o altera_avalon_tse_system_info.o altera_avalon_tse.o altera_vic.o altera_vic_irq_init.o altera_vic_isr_register.o altera_vic_sw_intr.o altera_vic_set_level.o altera_nios2_qsys_irq.o alt_usleep.o alt_busy_sleep.o alt_irq_vars.o alt_icache_flush.o alt_icache_flush_all.o alt_dcache_flush.o alt_dcache_flush_all.o alt_dcache_flush_no_writeback.o alt_ecc_fatal_exception.o alt_instruction_exception_entry.o alt_irq_register.o alt_iic.o alt_remap_cached.o alt_remap_uncached.o alt_uncached_free.o alt_uncached_malloc.o alt_do_ctors.o alt_do_dtors.o alt_gmon.o alt_alarm_start.o alt_close.o alt_dev.o alt_dev_llist_insert.o alt_dma_rxchan_open.o alt_dma_txchan_open.o alt_environ.o alt_env_lock.o alt_errno.o alt_execve.o alt_exit.o alt_fcntl.o alt_fd_lock.o alt_fd_unlock.o alt_find_dev.o alt_find_file.o alt_flash_dev.o alt_fork.o alt_fs_reg.o alt_fstat.o alt_get_fd.o alt_getchar.o alt_getpid.o alt_gettod.o alt_iic_isr_register.o alt_instruction_exception_register.o alt_ioctl.o alt_io_redirect.o alt_irq_handler.o alt_isatty.o alt_kill.o alt_link.o alt_load.o alt_log_printf.o alt_lseek.o alt_main.o alt_malloc_lock.o alt_open.o alt_printf.o alt_putchar.o alt_putstr.o alt_read.o alt_release_fd.o alt_rename.o alt_sbrk.o alt_settod.o alt_stat.o alt_tick.o alt_times.o alt_unlink.o alt_wait.o alt_write.o api_lib.o api_msg.o err.o netbuf.o netdb.o netifapi.o sockets.o tcpip.o mem.o memp.o netif.o pbuf.o raw.o stats.o sys.o tcp.o tcp_in.o tcp_out.o udp.o dns.o init.o dhcp.o def.o timers.o asn1_dec.o asn1_enc.o mib2.o mib_structs.o msg_in.o msg_out.o autoip.o icmp.o igmp.o inet.o inet_chksum.o ip.o ip_addr.o ip_frag.o slipif.o etharp.o ethernetif.o auth.o fsm.o ipcp.o lcp.o magic.o ppp.o vj.o chap.o chpms.o md5.o pap.o ppp_oe.o randm.o alteraTseEthernetif.o fs.o fsdata.o httpd.o lwip_tse_mac.o tse_my_system.o lwip_test.o lwip_test.o    jtag_uart.o banner.o syslog.o serial.o log_output.o vasyslog.o t_perror.o strerror.o  Os_Lcfg.o    libkernel.a  -lgcc -lc  
+c:/altera/13.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-i686-mingw32/nios2-elf/bin/ld.exe:../../PRG/lwip_test/linker.x:96: warning: memory region `reset' not declared
+c:/altera/13.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-i686-mingw32/nios2-elf/bin/ld.exe:../../PRG/lwip_test/linker.x:125: warning: memory region `sdram' not declared
+c:/altera/13.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-i686-mingw32/nios2-elf/bin/ld.exe:../../PRG/lwip_test/linker.x:381: warning: memory region `sram' not declared
+c:/altera/13.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-i686-mingw32/nios2-elf/bin/ld.exe:../../target/nios2_dev_gcc/nios2_dev_de2_115.ld:4: warning: redeclaration of memory region `//sdram'
+c:/altera/13.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.7.3/../../../../../H-i686-mingw32/nios2-elf/bin/ld.exe:../../target/nios2_dev_gcc/nios2_dev_de2_115.ld:9: warning: redeclaration of memory region `//sram'
+tse_my_system.o:(.data+0x0): multiple definition of `tse_mac_device'
+altera_avalon_tse_system_info.o:(.data+0x0): first defined here
+lwip_test.o: In function `lwipAlarmCallback':
+C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:79: multiple definition of `lwipAlarmCallback'
+lwip_test.o:C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:79: first defined here
+lwip_test.o: In function `main':
+C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:124: multiple definition of `main'
+lwip_test.o:C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:124: first defined here
+lwip_test.o: In function `lwipProcessTimers':
+C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:240: multiple definition of `lwipProcessTimers'
+lwip_test.o:C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:240: first defined here
+lwip_test.o: In function `TaskMainUSRV_TASK':
+C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:139: multiple definition of `TaskMainUSRV_TASK'
+lwip_test.o:C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:139: first defined here
+lwip_test.o: In function `lwipAlarmCallback':
+C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:79: multiple definition of `alteraTseNetif'
+lwip_test.o:C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:79: first defined here
+lwip_test.o: In function `lwipAlarmCallback':
+C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:79: multiple definition of `lwipStaticIp'
+lwip_test.o:C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:79: first defined here
+lwip_test.o: In function `ErrorHook':
+C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:271: multiple definition of `ErrorHook'
+lwip_test.o:C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:271: first defined here
+lwip_test.o: In function `PreTaskHook':
+C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:404: multiple definition of `PreTaskHook'
+lwip_test.o:C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:404: first defined here
+lwip_test.o: In function `PostTaskHook':
+C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:416: multiple definition of `PostTaskHook'
+lwip_test.o:C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:416: first defined here
+lwip_test.o: In function `StartupHook':
+C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:430: multiple definition of `StartupHook'
+lwip_test.o:C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:430: first defined here
+lwip_test.o: In function `ShutdownHook':
+C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:453: multiple definition of `ShutdownHook'
+lwip_test.o:C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:453: first defined here
+lwip_test.o: In function `ProtectionHook':
+C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:479: multiple definition of `ProtectionHook'
+lwip_test.o:C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/lwip_test.c:479: first defined here
+start.o: In function `start':
+C:\cygwin\home\adwinying\FreeLwIP-Nios-II\atk2-sc1\OBJ\lwip_test/../../arch/nios2_gcc/start.S:176: warning: Unable to reach (null) (at 0x0002d204) from the global pointer (at 0x00035244) because the offset (-32832) is out of the allowed range, -32678 to 32767.
+
+collect2.exe: error: ld returned 1 exit status
+make: *** [Makefile:408: atk2-sc1.exe] エラー 1

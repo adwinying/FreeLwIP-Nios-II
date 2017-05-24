@@ -1,0 +1,29 @@
+#
+#  TCP で使用するカーネルオブジェクト
+#
+
+Ecuc:
+  Os:
+
+# 出力タスク
+
+    TCP_OUTPUT_TASK:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: (TMAX_TPRI - TCP_OUT_TASK_PRIORITY)
+      OsTaskStackSize: TCP_OUT_TASK_STACK_SIZE
+      OsTaskSchedule: FULL
+      OsTaskResourceRef: /Ecuc/Os/RES_TCP_CEP
+      OsTaskEventRef: /Ecuc/Os/EVT_TCP_POST_OUTPUT
+
+# セマフォ
+
+    EVT_TCP_POST_OUTPUT:
+      DefinitionRef: OsEvent
+    RES_TCP_CEP:
+      DefinitionRef: OsResource
+      OsResourceProperty: STANDARD
+
+#    RES_TCP_TRACE:
+#      DefinitionRef: OsResource
+#      OsResourceProperty: STANDARD

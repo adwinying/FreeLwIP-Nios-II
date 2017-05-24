@@ -1,0 +1,39 @@
+#
+#  Ethernet コンフィギュレーションファイル
+#
+
+Ecuc:
+  Os:
+    ETHER_OUTPUT_TASK:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: (TMAX_TPRI - ETHER_OUTPUT_PRIORITY)
+      OsTaskStackSize: ETHER_OUTPUT_STACK_SIZE
+      OsTaskSchedule: FULL
+      OsTaskEventRef:
+        - /Ecuc/Os/EVT_ETHER_OUTPUT
+        - /Ecuc/Os/EVT_IF_TSE_SBUF_READY
+    ETHER_INPUT_TASK:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: (TMAX_TPRI - ETHER_INPUT_PRIORITY)
+      OsTaskStackSize: ETHER_INPUT_STACK_SIZE
+      OsTaskSchedule: FULL
+      OsTaskResourceRef:
+        - /Ecuc/Os/RES_IP4_FRAG_QUEUE
+        - /Ecuc/Os/RES_MAC2STR_BUFF_LOCK
+        - /Ecuc/Os/RES_ARP_CACHE_LOCK
+        - /Ecuc/Os/RES_CALL_OUT_LOCK
+        - /Ecuc/Os/RES_IP2STR_BUFF_LOCK
+      OsTaskEventRef: /Ecuc/Os/EVT_IF_TSE_RBUF_READY
+      OsTaskAutostart:
+        OsTaskAppModeRef: /Ecuc/Os/AppMode
+
+    EVT_ETHER_OUTPUT:
+      DefinitionRef: OsEvent
+
+# サポート関数 mac2str 用セマフォ
+
+    RES_MAC2STR_BUFF_LOCK:
+      DefinitionRef: OsResource
+      OsResourceProperty: STANDARD

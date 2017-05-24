@@ -1,0 +1,51 @@
+#
+#  共通 汎用ネットワークコンフィギュレーションファイル
+#
+
+Ecuc:
+  Os:
+
+#
+#  ネットワークタイマ
+#
+
+    NET_TIMER_TASK:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: (TMAX_TPRI - NET_TIMER_PRIORITY)
+      OsTaskStackSize: NET_TIMER_STACK_SIZE
+      OsTaskSchedule: FULL
+      OsTaskResourceRef:
+        - /Ecuc/Os/RES_IP4_FRAG_QUEUE
+        - /Ecuc/Os/RES_IN_ROUTING_TBL
+        - /Ecuc/Os/RES_ARP_CACHE_LOCK
+#        - /Ecuc/Os/RES_TCP_TRACE
+        - /Ecuc/Os/RES_CALL_OUT_LOCK
+      OsTaskEventRef: /Ecuc/Os/EVT_CALL_OUT_TIMEOUT
+
+    NET_TIMER_ALARM:
+      DefinitionRef: OsAlarm
+      OsAlarmCounterRef: /Ecuc/Os/MAIN_HW_COUNTER
+      OsAlarmAction:
+        OsAlarmSetEvent:
+          OsAlarmSetEventTaskRef: /Ecuc/Os/NET_TIMER_TASK
+          OsAlarmSetEventRef: /Ecuc/Os/EVT_CALL_OUT_TIMEOUT
+      OsAlarmAutostart:
+        OsAlarmAlarmTime: (TIMER_CLOCK_HZ / 1000)
+        OsAlarmCycleTime: (NET_TIMER_CYCLE * (TIMER_CLOCK_HZ / 1000))
+        OsAlarmAutostartType: ABSOLUTE
+        OsAlarmAppModeRef: /Ecuc/Os/AppMode
+
+# ネットワークタイマの呼出しエントリ用セマフォ
+
+    RES_CALL_OUT_LOCK:
+      DefinitionRef: OsResource
+      OsResourceProperty: STANDARD
+    EVT_CALL_OUT_TIMEOUT:
+      DefinitionRef: OsEvent
+
+# サポート関数 ip2str、ipv62str 用セマフォ
+
+    RES_IP2STR_BUFF_LOCK:
+      DefinitionRef: OsResource
+      OsResourceProperty: STANDARD

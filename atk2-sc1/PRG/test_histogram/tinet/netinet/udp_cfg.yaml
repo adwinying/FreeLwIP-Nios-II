@@ -1,0 +1,27 @@
+#
+#  UDP で使用するカーネルオブジェクト
+#
+
+Ecuc:
+  Os:
+
+#
+#  ノンブロッキングコールを行う場合に組み込むタスクとセマフォ
+#
+
+#    UDP_OUTPUT_TASK:
+#      DefinitionRef: OsTask
+#      OsTaskActivation: 1U
+#      OsTaskPriority: (TMAX_TPRI - UDP_OUT_TASK_PRIORITY)
+#      OsTaskStackSize: UDP_OUT_TASK_STACK_SIZE
+#      OsTaskSchedule: FULL
+#      OsTaskEventRef: /Ecuc/Os/EVT_UDP_POST_OUTPUT
+
+# セマフォ
+
+#    EVT_UDP_POST_OUTPUT:
+#      DefinitionRef: OsEvent
+
+    RES_UDP_CEP:
+      DefinitionRef: OsResource
+      OsResourceProperty: STANDARD

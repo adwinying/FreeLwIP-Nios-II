@@ -1,0 +1,18 @@
+#
+#  IPv4 で使用するカーネルオブジェクト
+#
+
+Ecuc:
+  Os:
+
+# データグラムの分割・再構成
+
+    RES_IP4_FRAG_QUEUE:
+      DefinitionRef: OsResource
+      OsResourceProperty: STANDARD
+
+# ルーティング表（向け直し）
+
+    RES_IN_ROUTING_TBL:
+      DefinitionRef: OsResource
+      OsResourceProperty: STANDARD

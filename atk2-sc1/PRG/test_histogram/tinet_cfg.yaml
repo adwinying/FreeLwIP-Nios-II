@@ -1,0 +1,12 @@
+#
+#  TINET カーネル構成ファイル
+#
+
+Ecuc:
+  Os:
+
+# UDP (IPv4) 通信端点
+
+    RES_UDP_CEP_LOCK1:
+      DefinitionRef: OsResource
+      OsResourceProperty: STANDARD

@@ -1,0 +1,229 @@
+#
+#   TINET (TCP/IP Protocol Stack)
+#
+#   Copyright (C) 2001-2009 by Dep. of Computer Science and Engineering
+#                    Tomakomai National College of Technology, JAPAN
+#   Copyright (C) 2008-2009 by Hokkaido Industrial Research Institute, JAPAN
+#
+#   上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
+#   によって公表されている GNU General Public License の Version 2 に記
+#   述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
+#   を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
+#   利用と呼ぶ）することを無償で許諾する．
+#   (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+#       権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+#       スコード中に含まれていること．
+#   (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+#       用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+#       者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+#       の無保証規定を掲載すること．
+#   (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+#       用できない形で再配布する場合には，次の条件を満たすこと．
+#     (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+#         作権表示，この利用条件および下記の無保証規定を掲載すること．
+#   (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+#       害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
+#
+#   本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+#   よびTOPPERSプロジェクトは，本ソフトウェアに関して，その適用可能性も
+#   含めて，いかなる保証も行わない．また，本ソフトウェアの利用により直
+#   接的または間接的に生じたいかなる損害に関しても，その責任を負わない．
+#
+#   @(#) $Id: Makefile.tinet,v 1.5.4.1 2015/02/05 02:07:56 abe Exp abe $
+#
+
+#
+#  「ミドルウェアの Makefile のインクルード」に追加する。
+#
+
+#
+#  カーネルの識別
+#
+TARGET_KERNEL = ATK2
+TINET_CDEFS := $(TINET_CDEFS) -DTARGET_KERNEL_ATK2
+
+#
+#  TINET ソースファイルのディレクトリの定義
+#
+TINET_ROOT = $(APPLDIR)/tinet
+
+#
+#  TINET 1.1 との互換性のための定義
+#
+ifndef SUPPORT_INET4
+	ifndef SUPPORT_INET6
+		SUPPORT_INET4 = true
+	endif
+endif
+
+#
+#  ネットワークサービスに関する定義
+#
+TINET_DIR = $(TINET_ROOT)/net:$(TINET_ROOT)/netinet
+
+TINET_COBJS := $(TINET_COBJS) \
+               net_buf.o net_count.o net_subr.o net_timer.o \
+               in_subr.o tinet_cfg.o route_cfg.o
+
+ifeq ($(SUPPORT_INET4),true)
+
+	TINET_COBJS := $(TINET_COBJS) \
+	               ip_input.o ip_output.o ip_icmp.o
+	TINET_CFG_INPUT := $(TINET_CFG_INPUT) $(TINET_ROOT)/netinet/ip_cfg.arxml
+	TINET_CDEFS := $(TINET_CDEFS) -DSUPPORT_INET4
+
+endif
+
+ifeq ($(SUPPORT_INET6),true)
+
+	TINET_DIR := $(TINET_DIR):$(TINET_ROOT)/netinet6
+	TINET_COBJS := $(TINET_COBJS) \
+	               in6.o in6_ifattach.o nd6_rtr.o \
+	               in6_subr.o ip6_input.o icmp6.o \
+	               dest6.o route6.o frag6.o \
+	               ah_input.o esp_input.o \
+	               nd6.o nd6_nbr.o ip6_output.o scope6.o
+	TINET_CFG_INPUT := $(TINET_CFG_INPUT) $(TINET_ROOT)/netinet6/ip6_cfg.arxml
+	TINET_CDEFS := $(TINET_CDEFS) -DSUPPORT_INET6
+
+endif
+
+ifeq ($(NET_IF),loop)
+
+	TINET_COBJS := $(TINET_COBJS) if_loop.o
+	TINET_CFG_INPUT := $(TINET_CFG_INPUT) $(TINET_ROOT)/net/if_loop_cfg.arxml
+	TINET_CFG_COBJS := $(TINET_CFG_COBJS) if_loop_cfg.o
+	TINET_CDEFS := $(TINET_CDEFS) -DSUPPORT_LOOP
+
+endif
+
+ifeq ($(NET_IF),ppp)
+
+	TINET_COBJS := $(TINET_COBJS) \
+	               ppp.o ppp_hdlc.o ppp_lcp.o ppp_fsm.o \
+	               ppp_auth.o ppp_ipcp.o ppp_upap.o
+	TINET_CFG_INPUT := $(TINET_CFG_INPUT) $(TINET_ROOT)/net/ppp_cfg.arxml
+	TINET_CFG_COBJS := $(TINET_CFG_COBJS) ppp_cfg.o
+	TINET_CDEFS := $(TINET_CDEFS) -DSUPPORT_PPP
+
+ifeq ($(PPP_CFG_MODEM),true)
+
+	TINET_COBJS := $(TINET_COBJS) ppp_modem.o
+	TINET_CDEFS := $(TINET_CDEFS) -DPPP_CFG_MODEM
+
+endif
+
+endif
+
+#  ターゲット依存の定義のインクルード
+
+ifeq ($(TARGET_KERNEL),ATK2)
+
+	-include $(TARGETDIR)/Makefile.tinet
+
+endif
+
+ifeq ($(NET_IF),ether)
+
+	TINET_COBJS := $(TINET_COBJS) if.o ethernet.o
+	TINET_CFG_INPUT := $(TINET_CFG_INPUT) $(TINET_ROOT)/net/ethernet_cfg.arxml
+	TINET_CFG_COBJS := $(TINET_CFG_COBJS) ethernet_cfg.o
+	TINET_CDEFS := $(TINET_CDEFS) -DSUPPORT_ETHER
+
+	ifeq ($(SUPPORT_INET4),true)
+
+		TINET_COBJS := $(TINET_COBJS) if_ether.o
+		TINET_CFG_INPUT := $(TINET_CFG_INPUT) $(TINET_ROOT)/netinet/if_ether_cfg.arxml
+
+	endif
+
+	ifeq ($(SUPPORT_INET6),true)
+
+		TINET_COBJS := $(TINET_COBJS) if6_ether.o
+
+	endif
+
+
+	include $(TINET_ROOT)/netdev/$(NET_DEV)/Makefile.tinet
+
+endif
+
+ifeq ($(SUPPORT_TCP),true)
+
+	TINET_COBJS := $(TINET_COBJS) \
+	               tcp_input.o tcp_output.o tcp_timer.o \
+	               tcp_subr.o tcp_subr_cs.o tcp_subr_ncs.o
+	TINET_CFG_INPUT := $(TINET_CFG_INPUT) $(TINET_ROOT)/netinet/tcp_cfg.arxml
+	TINET_CDEFS := $(TINET_CDEFS) -DSUPPORT_TCP
+
+endif
+
+ifeq ($(SUPPORT_UDP),true)
+
+	TINET_COBJS := $(TINET_COBJS) \
+	               udp_input.o udp_output.o udp_subr.o
+	TINET_CFG_INPUT := $(TINET_CFG_INPUT) $(TINET_ROOT)/netinet/udp_cfg.arxml
+	TINET_CDEFS := $(TINET_CDEFS) -DSUPPORT_UDP
+
+endif
+
+#
+#  TINET ライブラリの定義
+#
+
+ifeq ($(SUPPORT_TCP),true)
+
+	TINET_COBJS := $(TINET_COBJS) tcp_usrreq.o
+
+endif
+
+ifeq ($(SUPPORT_UDP),true)
+
+	TINET_COBJS := $(TINET_COBJS) udp_usrreq.o
+
+endif
+
+#
+#  TINET コンフィギュレーションファイルの定義
+#
+
+ifeq ($(TARGET_KERNEL),ATK2)
+
+TINET_CFG_INPUT :=	$(TINET_CFG_INPUT) tinet_cfg.arxml \
+			$(TINET_ROOT)/tinet_atk2_cfg.arxml $(TINET_ROOT)/net/net_cfg.arxml
+TINET_CFG_COBJS :=	$(TINET_CFG_COBJS) \
+			net_atk2_cfg.o
+
+endif
+
+#
+#  共通コンパイルオプションの定義への追加
+#
+CDEFS := $(CDEFS) $(TINET_CDEFS)
+INCLUDES := $(INCLUDES) -I$(TINET_ROOT)
+
+#
+#  TINET コンパイルオプションの定義への追加
+#
+TINET_CFLAGS := $(TINET_CFLAGS) -fno-strict-aliasing
+
+#
+#  アプリケーションプログラム、ミドルウェアに関する定義
+#
+
+ifeq ($(TARGET_KERNEL),ATK2)
+
+	APPL_CFG_INPUT := $(TINET_CFG_INPUT) $(APPL_CFG_INPUT)
+
+	APPL_DIR := $(TINET_DIR):$(APPL_DIR)
+	APPL_ASMOBJS := $(APPL_ASMOBJS)
+	ifdef USE_CXX
+		APPL_CXXOBJS := $(APPL_CXXOBJS)
+		APPL_COBJS := $(TINET_COBJS) $(APPL_COBJS) $(TINET_CFG_COBJS)
+	else
+		APPL_COBJS := $(TINET_COBJS) $(APPL_COBJS) $(TINET_CFG_COBJS)
+	endif
+	APPL_CFLAGS := $(TINET_CFLAGS) $(APPL_CFLAGS)
+	APPL_LIBS := $(APPL_LIBS)
+
+endif

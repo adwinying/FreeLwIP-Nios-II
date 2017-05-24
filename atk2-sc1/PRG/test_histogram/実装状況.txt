@@ -1,0 +1,92 @@
+実装状況（*：実装途中）
+
+
+atk2-sc1/arch/nios2_gcc/
+	prc_sil.h
+
+
+$(APPLDIR)/
+	$(APPLNAME).c
+	$(APPLNAME).yaml
+	dataqueue.c
+	dataqueue.h
+	Makefile
+	mempfix.c
+	mempfix.h
+	route_cfg.c
+	tinet_app_config.h
+	tinet_cfg.c
+	tinet_cfg.h
+	tinet_cfg.yaml
+
+
+$(APPLDIR)/tinet/
+	net/
+		ether_var.h
+		ethernet.c
+		ethernet.h
+		ethernet_cfg.c
+		ethernet_cfg.h
+		ethernet_cfg.yaml
+		if.c
+		if.h
+		if_arp.h
+		if_var.h
+		net.h
+		net_atk2_cfg.c
+		net_atk2_cfg.h
+		net_buf.c
+		net_buf.h
+		net_cfg.yaml
+		net_count.c
+		net_count.h
+		net_subr.c
+		net_timer.c
+		net_timer.h
+		net_var.h
+
+	netdev/if_tse/
+		if_tse.c
+		if_tse.h
+		if_tse_cfg.yaml
+		Makefile.tinet
+		tinet_nic_config.h
+		tinet_nic_defs.h
+
+	netinet/
+		icmp_var.h
+		if_ether.c
+		if_ether.h
+		if_ether_cfg.yaml
+		in.h
+		in_itron.h
+		in_subr.c
+		in_var.h
+		ip.h
+		ip_cfg.yaml
+		ip_icmp.c
+		ip_icmp.h
+		ip_input.c
+		ip_output.c
+		ip_var.h
+		udp.h
+		udp_cfg.yaml
+		udp_input.c
+		udp_output.c
+		udp_subr.c
+		udp_usrreq.c
+		udp_var.h
+
+	Makefile.tinet
+	tinet_atk2_cfg.h
+	tinet_atk2_cfg.yaml
+	tinet_config.h
+	tinet_defs.h
+	tinet_kernel_defs.h
+
+
+atk2-sc1/target/nios2_dev_gcc/
+	Makefile.tinet
+	tinet_target_config.c
+	tinet_target_config.h
+	tinet_target_defs.h

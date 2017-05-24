@@ -1,0 +1,258 @@
+{ "EXEC kernel.tf"(),  }
+{ "ASSOCIATE TASK"(),  }
+{ "ASSOCIATE ISR"(),  }
+{ "ASSOCIATE ALARM"(),  }
+{ "ASSOCIATE SCHTBL"(),  }
+{ "ISR CHECK"(),  }
+{ "RESOURCE CHECK"(),  }
+{ "TASK CHECK"(),  }
+{ "EVENT CHECK"(),  }
+{ "COUNTER CHECK"(),  }
+{ "ALARM CHECK"(),  }
+{ "SCHEDULETABLE CHECK"(),  }
+{ "OUTPUT FILES"(),  }
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/net/net_buf.c:3:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/net/net_count.c:7:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/net/net_subr.c:7:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/net/net_timer.c:3:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/netinet/in_subr.c:6:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet_cfg.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/route_cfg.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/netinet/ip_input.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/netinet/ip_output.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/netinet/ip_icmp.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+../../PRG/test_histogram/tinet/netinet/ip_icmp.c: In function 'icmp_unreach':
+../../PRG/test_histogram/tinet/netinet/ip_icmp.c:131:6: warning: variable 'error' set but not used [-Wunused-but-set-variable]
+In file included from ../../include/Os.h:287:0,
+                 from ../../target/nios2_dev_gcc/tinet_target_config.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/net/if.c:3:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/net/ethernet.c:9:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/netinet/if_ether.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/netdev/if_tse/if_tse.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/netdev/if_tse/avalon_tse.c:3:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/netdev/if_tse/avalon_sgdma.c:3:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/netinet/udp_input.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+../../PRG/test_histogram/tinet/netinet/udp_input.c: In function 'udp_input':
+../../PRG/test_histogram/tinet/netinet/udp_input.c:138:10: warning: variable 'len' set but not used [-Wunused-but-set-variable]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/netinet/udp_output.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/netinet/udp_subr.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/netinet/udp_usrreq.c:9:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from test_histogram.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../include/t_syslog.h:82,
+                 from ../../include/histogram.h:64,
+                 from ../../library/histogram.c:61:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/eventflag.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/dataqueue.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/mempfix.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/net/ethernet_cfg.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../PRG/test_histogram/tinet/net/net_atk2_cfg.c:5:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../arch/nios2_gcc/jtag_uart.c:61:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../include/t_syslog.h:82,
+                 from ../../sysmod/syslog.c:69:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../sysmod/serial.c:63:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../include/t_syslog.h:82,
+                 from ../../include/log_output.h:66,
+                 from ../../library/log_output.c:63:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../include/t_syslog.h:82,
+                 from ../../library/vasyslog.c:62:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../include/t_syslog.h:82,
+                 from ../../library/t_perror.c:63:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../library/strerror.c:63:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from Os_Lcfg.c:3:0:
+Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+Os_Lcfg.c:602:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../target/nios2_dev_gcc/target_hw_counter.c:88:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../arch/nios2_gcc/avalon_timer.c:64:0:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]
+In file included from ../../include/Os.h:287:0,
+                 from ../../include/t_syslog.h:82,
+                 from ../../sysmod/banner.c:63:
+./Os_Lcfg.h:135:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:136:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:137:1: warning: 'naked' attribute directive ignored [-Wattributes]
+./Os_Lcfg.h:138:1: warning: 'naked' attribute directive ignored [-Wattributes]

@@ -1,0 +1,26 @@
+#
+#  if_tse コンフィギュレーションファイル
+#
+
+Ecuc:
+  Os:
+
+# 割り込みハンドラ
+
+    if_tse_tx_handler:
+      DefinitionRef: OsIsr
+      OsIsrInterruptNumber: INTNO_IF_TSE_TX
+      OsIsrInterruptPriority: INTPRI_IF_TSE
+      OsIsrCategory: CATEGORY_2
+    if_tse_rx_handler:
+      DefinitionRef: OsIsr
+      OsIsrInterruptNumber: INTNO_IF_TSE_RX
+      OsIsrInterruptPriority: INTPRI_IF_TSE
+      OsIsrCategory: CATEGORY_2
+
+# 入出力同期用セマフォ
+
+    EVT_IF_TSE_SBUF_READY:
+      DefinitionRef: OsEvent
+    EVT_IF_TSE_RBUF_READY:
+      DefinitionRef: OsEvent

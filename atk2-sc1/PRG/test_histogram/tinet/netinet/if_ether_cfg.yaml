@@ -1,0 +1,12 @@
+#
+#  Ethernet ARP コンフィギュレーションファイル
+#
+
+Ecuc:
+  Os:
+
+# ARP キャッシュ更新用セマフォ
+
+    RES_ARP_CACHE_LOCK:
+      DefinitionRef: OsResource
+      OsResourceProperty: STANDARD

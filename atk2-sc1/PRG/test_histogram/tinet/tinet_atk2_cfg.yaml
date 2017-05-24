@@ -1,0 +1,41 @@
+#
+#  TINET の標準システムコンフィギュレーションファイル
+#
+
+Ecuc:
+  Os:
+    OsInclude:
+      OsIncludeFileName:
+        - target_sysmod.h
+
+        - Std_Types.h
+
+        - tinet_defs.h
+        - tinet_config.h
+
+        - net/if.h
+#        - net/if_ppp.h
+#        - net/if_loop.h
+        - net/ethernet.h
+        - net/if_arp.h
+        - net/net.h
+        - net/net_buf.h
+        - net/net_timer.h
+#        - net/ppp_var.h
+        - net/ether_var.h
+        - netinet/in.h
+        - netinet/ip.h
+#        - netinet/ip6.h
+        - netinet/ip_var.h
+        - netinet/tcp.h
+        - netinet/tcp_timer.h
+        - netinet/tcp_var.h
+        - netinet/udp_var.h
+#        - netinet6/in6.h
+#        - netinet6/ip6_var.h
+
+#
+#  TCP/IP コンフィギュレータで生成されたのカーネルオブジェクトの指定
+#
+
+        - tinet_cfg.h
