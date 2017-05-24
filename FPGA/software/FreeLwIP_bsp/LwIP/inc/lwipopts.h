@@ -38,9 +38,6 @@
 #ifndef __LWIPOPTS_H__
 #define __LWIPOPTS_H__
 
-//  Altera TSE requires 2 byte padding for use with lwIP!
-#define ETH_PAD_SIZE        2
-
 #include <sys/time.h>
 
 #include "lwip/debug.h"
@@ -136,13 +133,13 @@
  * the smallest pool that can provide the length needed is returned.
  * To use this, MEMP_USE_CUSTOM_POOLS also has to be enabled.
  */
-#define MEM_USE_POOLS                   0
+#define MEM_USE_POOLS                   CONF_LWIP_USE_MEMPOOLS
 
 /**
  * MEM_USE_POOLS_TRY_BIGGER_POOL==1: if one malloc-pool is empty, try the next
  * bigger pool - WARNING: THIS MIGHT WASTE MEMORY but it can make a system more
  * reliable. */
-#define MEM_USE_POOLS_TRY_BIGGER_POOL   0
+#define MEM_USE_POOLS_TRY_BIGGER_POOL   CONF_LWIP_MALLOC_MEMPOOL_TRY_BIGGER_POOLS
 
 /**
  * MEMP_USE_CUSTOM_POOLS==1: whether to include a user file lwippools.h
@@ -150,7 +147,7 @@
  * by lwIP. If you set this to 1, you must have lwippools.h in your
  * inlude path somewhere.
  */
-#define MEMP_USE_CUSTOM_POOLS           0
+#define MEMP_USE_CUSTOM_POOLS           CONF_LWIP_USE_MEMPOOLS
 
 /**
  * Set this to 1 if you want to free PBUF_RAM pbufs (or call mem_free()) from
@@ -213,13 +210,22 @@
  * MEMP_NUM_TCP_SEG: the number of simultaneously queued TCP segments.
  * (requires the LWIP_TCP option)
  */
-#define MEMP_NUM_TCP_SEG                16
+#define MEMP_NUM_TCP_SEG                CONF_LWIP_MEMP_TCP_SEG
 
 /**
  * MEMP_NUM_REASSDATA: the number of simultaneously IP packets queued for
  * reassembly (whole packets, not fragments!)
  */
-#define MEMP_NUM_REASSDATA              5
+#define MEMP_NUM_REASSDATA              CONF_LWIP_MEMP_REASSDATA
+
+/**
+ * MEMP_NUM_FRAG_PBUF: the number of IP fragments simultaneously sent
+ * (fragments, not whole packets!).
+ * This is only used with IP_FRAG_USES_STATIC_BUF==0 and
+ * LWIP_NETIF_TX_SINGLE_PBUF==0 and only has to be > 1 with DMA-enabled MACs
+ * where the packet is not yet sent when netif->output returns.
+ */
+#define MEMP_NUM_FRAG_PBUF              15
 
 /**
  * MEMP_NUM_ARP_QUEUE: the number of simulateously queued outgoing
@@ -227,7 +233,7 @@
  * their destination address) to finish.
  * (requires the ARP_QUEUEING option)
  */
-#define MEMP_NUM_ARP_QUEUE              15
+#define MEMP_NUM_ARP_QUEUE              CONF_LWIP_MEMP_ARP_QUEUE
 
 /**
  * MEMP_NUM_IGMP_GROUP: The number of multicast groups whose network interfaces
@@ -241,33 +247,33 @@
  * MEMP_NUM_SYS_TIMEOUT: the number of simulateously active timeouts.
  * (requires NO_SYS==0)
  */
-#define MEMP_NUM_SYS_TIMEOUT            10
+#define MEMP_NUM_SYS_TIMEOUT            CONF_LWIP_MEMP_SYS_TIMEOUT
 
 /**
  * MEMP_NUM_NETBUF: the number of struct netbufs.
  * (only needed if you use the sequential API, like api_lib.c)
  */
-#define MEMP_NUM_NETBUF                 (CONF_LWIP_RAW_PCB + CONF_LWIP_UDP_PCB + CONF_LWIP_TCP_PCB + CONF_LWIP_TCP_PCB_LISTEN)
+#define MEMP_NUM_NETBUF                 CONF_LWIP_MEMP_NETBUFS
 
 /**
  * MEMP_NUM_NETCONN: the number of struct netconns.
  * (only needed if you use the sequential API, like api_lib.c)
  */
-#define MEMP_NUM_NETCONN                (CONF_LWIP_RAW_PCB + CONF_LWIP_UDP_PCB + CONF_LWIP_TCP_PCB + CONF_LWIP_TCP_PCB_LISTEN)
+#define MEMP_NUM_NETCONN                CONF_LWIP_MEMP_NETCONNS
 
 /**
  * MEMP_NUM_TCPIP_MSG_API: the number of struct tcpip_msg, which are used
  * for callback/timeout API communication. 
  * (only needed if you use tcpip.c)
  */
-#define MEMP_NUM_TCPIP_MSG_API          8
+#define MEMP_NUM_TCPIP_MSG_API          CONF_LWIP_MEMP_TCPIP_MSG_API
 
 /**
  * MEMP_NUM_TCPIP_MSG_INPKT: the number of struct tcpip_msg, which are used
  * for incoming packets. 
  * (only needed if you use tcpip.c)
  */
-#define MEMP_NUM_TCPIP_MSG_INPKT        32 // TODO was 8
+#define MEMP_NUM_TCPIP_MSG_INPKT        CONF_LWIP_MEMP_TCPIP_MSG_INPKT
 
 /**
  * MEMP_NUM_SNMP_NODE: the number of leafs in the SNMP tree.
@@ -315,7 +321,7 @@
 /**
  * PBUF_POOL_SIZE: the number of buffers in the pbuf pool. 
  */
-#define PBUF_POOL_SIZE                  64
+#define PBUF_POOL_SIZE                  CONF_LWIP_MEMP_PBUF_POOL_SIZE
 
 /*
    ---------------------------------
@@ -668,7 +674,7 @@
 /**
  * LWIP_UDPLITE==1: Turn on UDP-Lite. (Requires LWIP_UDP)
  */
-#define LWIP_UDPLITE                    0
+#define LWIP_UDPLITE                    CONF_LWIP_PROTO_UDP_LITE
 
 /**
  * UDP_TTL: Default Time-To-Live value.
@@ -699,7 +705,7 @@
  * TCP_WND: The size of a TCP window.  This must be at least
  * (2 * TCP_MSS) for things to work well
  */
-#define TCP_WND                         8192 // (8 * TCP_MSS)
+#define TCP_WND                         2920
 
 /**
  * TCP_MAXRTX: Maximum number of retransmissions of data segments.
@@ -740,13 +746,13 @@
 /**
  * TCP_SND_BUF: TCP sender buffer space (bytes).
  */
-#define TCP_SND_BUF                     (2 * TCP_MSS)
+#define TCP_SND_BUF                     (3 * TCP_MSS)
 
 /**
  * TCP_SND_QUEUELEN: TCP sender buffer space (pbufs). This must be at least
  * as much as (2 * TCP_SND_BUF/TCP_MSS) for things to work.
  */
-#define TCP_SND_QUEUELEN                ((4 * (TCP_SND_BUF) + (TCP_MSS - 1))/(TCP_MSS))
+#define TCP_SND_QUEUELEN                ((2 * (TCP_SND_BUF) + (TCP_MSS - 1))/(TCP_MSS))
 
 /**
  * TCP_SNDLOWAT: TCP writable space (bytes). This must be less than

@@ -60,6 +60,8 @@
 #define IFNAME0 'e'
 #define IFNAME1 'n'
 
+extern int lwip_wait_for_an(int idx, struct ethernetif *ethernetif);
+
 /**
  * In this function, the hardware should be initialized.
  * Called from ethernetif_init().
@@ -82,7 +84,10 @@ low_level_init(struct netif *netif)
 	/* don't set NETIF_FLAG_ETHARP if this device is not an ethernet one */
 	netif->flags = NETIF_FLAG_BROADCAST | NETIF_FLAG_ETHARP | NETIF_FLAG_LINK_UP;
 
-	tse_mac_init(netif->num, ethernetif);
+	//tse_mac_init(netif->num, ethernetif);
+	lwip_wait_for_an(netif->num, ethernetif);
+
+	//usleep(250 * 1000);
 }
 
 /**
@@ -98,6 +103,7 @@ low_level_input(struct netif *netif)
 {
 	struct ethernetif *ethernetif = netif->state;
 	struct pbuf *p, *nextPkt;
+	alt_irq_context context;
 
 	if(ethernetif->lwipRxCount <= 0)
 		return NULL;
@@ -117,7 +123,7 @@ low_level_input(struct netif *netif)
 	nextPkt = (void *) alt_remap_uncached(nextPkt,sizeof *nextPkt);
 	nextPkt->payload = (void *) alt_remap_uncached(nextPkt->payload, PBUF_POOL_BUFSIZE);
 
-	enh_alt_irq_disable_all();
+	context = alt_irq_disable_all();
 
 	p = ethernetif->lwipRxPbuf[ethernetif->lwipRxIndex];
 	ethernetif->lwipRxPbuf[ethernetif->lwipRxIndex] = nextPkt;
@@ -126,7 +132,7 @@ low_level_input(struct netif *netif)
 
 	--ethernetif->lwipRxCount;
 
-	enh_alt_irq_enable_all();
+	alt_irq_enable_all(context);
 
 	LWIP_ASSERT("low_level_input: pbuf in rx buffer is NULL", p != NULL );
 	LWIP_ASSERT("low_level_input: pbuf->len in rx buffer is 0", p->len != 0 );
