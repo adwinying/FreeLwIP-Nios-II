@@ -76,7 +76,6 @@ main(void)
 
 TASK(USRV_TASK)
 {
-	syslog(LOG_INFO, "USRV_TASK start!");
 	static uint8_t buffer[BUF_SIZE];
 
 	T_IPV4EP	dst;
@@ -101,15 +100,12 @@ TASK(USRV_TASK)
 			WaitEvent(EVT_USRV);
 			ClearEvent(EVT_USRV);
 
-
 			if (histid <= TNUM_HIST && meas_flg == TRUE) {
 				end_measure(histid++);
 				meas_flg = FALSE;
 			}
 		}
 		if (len >= 0) {
-			syslog(LOG_INFO, "packet received!");
-
 			/* 実行時間の計測終了 */
 //			if (histid <= TNUM_HIST && meas_flg == TRUE) {
 //				end_measure(histid++);
